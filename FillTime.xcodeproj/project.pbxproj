@@ -14,6 +14,7 @@
 		5949F7BC2AAE0DD600E58D5A /* FillTimeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949F7BB2AAE0DD600E58D5A /* FillTimeTests.swift */; };
 		5949F7C62AAE0DD600E58D5A /* FillTimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949F7C52AAE0DD600E58D5A /* FillTimeUITests.swift */; };
 		5949F7C82AAE0DD600E58D5A /* FillTimeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949F7C72AAE0DD600E58D5A /* FillTimeUITestsLaunchTests.swift */; };
+		5949F7D52AAE172000E58D5A /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949F7D42AAE172000E58D5A /* TimerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +45,7 @@
 		5949F7C12AAE0DD600E58D5A /* FillTimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FillTimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5949F7C52AAE0DD600E58D5A /* FillTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillTimeUITests.swift; sourceTree = "<group>"; };
 		5949F7C72AAE0DD600E58D5A /* FillTimeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillTimeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		5949F7D42AAE172000E58D5A /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +98,7 @@
 			children = (
 				5949F7AA2AAE0DD300E58D5A /* FillTimeApp.swift */,
 				5949F7AC2AAE0DD300E58D5A /* ContentView.swift */,
+				5949F7D42AAE172000E58D5A /* TimerView.swift */,
 				5949F7AE2AAE0DD600E58D5A /* Assets.xcassets */,
 				5949F7B02AAE0DD600E58D5A /* Preview Content */,
 			);
@@ -257,6 +260,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5949F7D52AAE172000E58D5A /* TimerView.swift in Sources */,
 				5949F7AD2AAE0DD300E58D5A /* ContentView.swift in Sources */,
 				5949F7AB2AAE0DD300E58D5A /* FillTimeApp.swift in Sources */,
 			);
