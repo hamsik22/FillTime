@@ -97,8 +97,7 @@
 			isa = PBXGroup;
 			children = (
 				5949F7AA2AAE0DD300E58D5A /* FillTimeApp.swift */,
-				5949F7AC2AAE0DD300E58D5A /* ContentView.swift */,
-				5949F7D42AAE172000E58D5A /* TimerView.swift */,
+				5949F7D62AAF138D00E58D5A /* View */,
 				5949F7AE2AAE0DD600E58D5A /* Assets.xcassets */,
 				5949F7B02AAE0DD600E58D5A /* Preview Content */,
 			);
@@ -128,6 +127,15 @@
 				5949F7C72AAE0DD600E58D5A /* FillTimeUITestsLaunchTests.swift */,
 			);
 			path = FillTimeUITests;
+			sourceTree = "<group>";
+		};
+		5949F7D62AAF138D00E58D5A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5949F7AC2AAE0DD300E58D5A /* ContentView.swift */,
+				5949F7D42AAE172000E58D5A /* TimerView.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
