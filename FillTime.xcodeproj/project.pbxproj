@@ -15,6 +15,7 @@
 		5949F7C62AAE0DD600E58D5A /* FillTimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949F7C52AAE0DD600E58D5A /* FillTimeUITests.swift */; };
 		5949F7C82AAE0DD600E58D5A /* FillTimeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949F7C72AAE0DD600E58D5A /* FillTimeUITestsLaunchTests.swift */; };
 		5949F7D52AAE172000E58D5A /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949F7D42AAE172000E58D5A /* TimerView.swift */; };
+		5949F7D92AAF19BE00E58D5A /* LargeTimeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949F7D82AAF19BE00E58D5A /* LargeTimeTextView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		5949F7C52AAE0DD600E58D5A /* FillTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillTimeUITests.swift; sourceTree = "<group>"; };
 		5949F7C72AAE0DD600E58D5A /* FillTimeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillTimeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5949F7D42AAE172000E58D5A /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
+		5949F7D82AAF19BE00E58D5A /* LargeTimeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTimeTextView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,8 +136,17 @@
 			children = (
 				5949F7AC2AAE0DD300E58D5A /* ContentView.swift */,
 				5949F7D42AAE172000E58D5A /* TimerView.swift */,
+				5949F7D72AAF199B00E58D5A /* Component */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		5949F7D72AAF199B00E58D5A /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				5949F7D82AAF19BE00E58D5A /* LargeTimeTextView.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,6 +279,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5949F7D92AAF19BE00E58D5A /* LargeTimeTextView.swift in Sources */,
 				5949F7D52AAE172000E58D5A /* TimerView.swift in Sources */,
 				5949F7AD2AAE0DD300E58D5A /* ContentView.swift in Sources */,
 				5949F7AB2AAE0DD300E58D5A /* FillTimeApp.swift in Sources */,

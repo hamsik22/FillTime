@@ -11,11 +11,11 @@ struct TimerView: View {
     var body: some View {
         VStack {
             Text("WorkTime")
-            Text("00:00:00")
+            LargeTimeTextView()
             Text("Current Time")
             Text("00:00:00")
             Text("RestTime")
-            Text("00:00:00")
+            LargeTimeTextView()
             HStack {
                 Button { } label: { Text("Start") }
                 Button { } label: { Text("Stop") }
