@@ -10,12 +10,12 @@ import SwiftUI
 struct TimerView: View {
     var body: some View {
         VStack {
-            Text("WorkTime")
-            LargeTimeTextView()
-            Text("Current Time")
-            Text("00:00:00")
-            Text("RestTime")
-            LargeTimeTextView()
+            TitleTextView(text: "Work Time")
+            TimeTextView(textSize: 50)
+            TitleTextView(text: "Current Time")
+            TimeTextView(textSize: 30)
+            TitleTextView(text: "Rest Time")
+            TimeTextView(textSize: 50)
             HStack {
                 Button { } label: { Text("Start") }
                 Button { } label: { Text("Stop") }
