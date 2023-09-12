@@ -6,10 +6,34 @@
 //
 
 import Foundation
+import SwiftUI
 
-class TimerModel: ObservableObject {
+/**
+ TimerManager
+ 타이머 인스턴스, 타이머에 관여하는 모든 메서드를 가진 클래스
+ */
+class TimerManager: ObservableObject {
     
     @Published var timer = Timer()
+    @State var testingNum = 0
+    
+    // 타이머 인스턴스를 실행하는 함수
+    func startTimer() {
+        
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+            self.testingNum += 1
+        }
+    }
+    
+    // 타이머 인스턴스를 종료하는 함수
+    func stopTimer() { }
+    
+    // 타이머 전환하는 함수
+    func switchTimer() { }
+    
+    // 타이머를 리셋하는 함수(데이터 초기화)
+    func resetTimer() { }
+    
 }
 
 class TimeRepository: ObservableObject {
