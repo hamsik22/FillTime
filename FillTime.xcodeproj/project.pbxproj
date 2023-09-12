@@ -18,6 +18,9 @@
 		5949F7D92AAF19BE00E58D5A /* TimeTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949F7D82AAF19BE00E58D5A /* TimeTextView.swift */; };
 		5949F7DB2AAF24AD00E58D5A /* TitleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949F7DA2AAF24AD00E58D5A /* TitleTextView.swift */; };
 		5949F7DE2AB07DC300E58D5A /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949F7DD2AB07DC300E58D5A /* TimerModel.swift */; };
+		5949F7DF2AB0850400E58D5A /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949F7DD2AB07DC300E58D5A /* TimerModel.swift */; };
+		5949F7E12AB0857800E58D5A /* TestTimerMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949F7E02AB0857800E58D5A /* TestTimerMethod.swift */; };
+		5949F7E22AB0857800E58D5A /* TestTimerMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949F7E02AB0857800E58D5A /* TestTimerMethod.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,7 @@
 		5949F7D82AAF19BE00E58D5A /* TimeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTextView.swift; sourceTree = "<group>"; };
 		5949F7DA2AAF24AD00E58D5A /* TitleTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextView.swift; sourceTree = "<group>"; };
 		5949F7DD2AB07DC300E58D5A /* TimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
+		5949F7E02AB0857800E58D5A /* TestTimerMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTimerMethod.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				5949F7BB2AAE0DD600E58D5A /* FillTimeTests.swift */,
+				5949F7E02AB0857800E58D5A /* TestTimerMethod.swift */,
 			);
 			path = FillTimeTests;
 			sourceTree = "<group>";
@@ -299,6 +304,7 @@
 				5949F7DE2AB07DC300E58D5A /* TimerModel.swift in Sources */,
 				5949F7AD2AAE0DD300E58D5A /* ContentView.swift in Sources */,
 				5949F7AB2AAE0DD300E58D5A /* FillTimeApp.swift in Sources */,
+				5949F7E12AB0857800E58D5A /* TestTimerMethod.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +313,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				5949F7BC2AAE0DD600E58D5A /* FillTimeTests.swift in Sources */,
+				5949F7E22AB0857800E58D5A /* TestTimerMethod.swift in Sources */,
+				5949F7DF2AB0850400E58D5A /* TimerModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,7 +346,7 @@
 		5949F7C92AAE0DD600E58D5A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -371,6 +379,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -398,7 +407,7 @@
 		5949F7CA2AAE0DD600E58D5A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
+				ALWAYS_SEARCH_USER_PATHS = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
@@ -431,6 +440,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
