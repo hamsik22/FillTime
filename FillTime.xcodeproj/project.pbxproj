@@ -18,6 +18,7 @@
 		5949F7DB2AAF24AD00E58D5A /* TitleTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949F7DA2AAF24AD00E58D5A /* TitleTextView.swift */; };
 		5949F7DE2AB07DC300E58D5A /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949F7DD2AB07DC300E58D5A /* TimerModel.swift */; };
 		5949F7DF2AB0850400E58D5A /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949F7DD2AB07DC300E58D5A /* TimerModel.swift */; };
+		598A8ECB2AB19F7900C22677 /* TimerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 598A8ECA2AB19F7900C22677 /* TimerManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		5949F7D82AAF19BE00E58D5A /* TimeTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeTextView.swift; sourceTree = "<group>"; };
 		5949F7DA2AAF24AD00E58D5A /* TitleTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleTextView.swift; sourceTree = "<group>"; };
 		5949F7DD2AB07DC300E58D5A /* TimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
+		598A8ECA2AB19F7900C22677 /* TimerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 			children = (
 				5949F7AA2AAE0DD300E58D5A /* FillTimeApp.swift */,
 				5949F7D62AAF138D00E58D5A /* View */,
+				598A8EC92AB19F2800C22677 /* ViewModel */,
 				5949F7DC2AB07D8700E58D5A /* Model */,
 				5949F7B02AAE0DD600E58D5A /* Preview Content */,
 				5949F7AE2AAE0DD600E58D5A /* Assets.xcassets */,
@@ -159,6 +162,14 @@
 				5949F7DD2AB07DC300E58D5A /* TimerModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		598A8EC92AB19F2800C22677 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				598A8ECA2AB19F7900C22677 /* TimerManager.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +307,7 @@
 				5949F7DB2AAF24AD00E58D5A /* TitleTextView.swift in Sources */,
 				5949F7DE2AB07DC300E58D5A /* TimerModel.swift in Sources */,
 				5949F7AD2AAE0DD300E58D5A /* ContentView.swift in Sources */,
+				598A8ECB2AB19F7900C22677 /* TimerManager.swift in Sources */,
 				5949F7AB2AAE0DD300E58D5A /* FillTimeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

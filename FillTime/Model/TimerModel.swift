@@ -12,14 +12,14 @@ import SwiftUI
  TimerManager
  타이머 인스턴스, 타이머에 관여하는 모든 메서드를 가진 클래스
  */
-class TimerManager: ObservableObject {
+class TimerModel: ObservableObject {
     
     var timer: Timer?
     @Published var testingNum = 0
     var timeRepository: TimeRepository?
     
     // 타이머 인스턴스를 실행하는 함수
-    func startTimer(manager: TimerManager) {
+    func startTimer(manager: TimerModel) {
         
         self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
             self.testingNum += 1

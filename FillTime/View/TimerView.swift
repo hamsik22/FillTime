@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TimerView: View {
     
-    var viewModel = TimerManager()
+    var viewModel = TimerModel()
     
     var body: some View {
         VStack {
@@ -35,6 +35,6 @@ struct TimerView: View {
 
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerView(viewModel: TimerManager())
+        TimerView(viewModel: TimerModel())
     }
 }
