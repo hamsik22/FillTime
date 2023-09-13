@@ -9,7 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        TimerView(viewModel: TimerModel())
+        TimerView(viewModel: TimerManager())
     }
 }
 

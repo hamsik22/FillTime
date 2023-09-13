@@ -15,15 +15,19 @@ import SwiftUI
 class TimerModel: ObservableObject {
     
     var timer: Timer?
-    @Published var testingNum = 0
-    var timeRepository: TimeRepository?
+    
+    @Published var workTime: Int = 0
+    @Published var currentTime: Int = 0
+    @Published var restTime: Int = 0
     
     // 타이머 인스턴스를 실행하는 함수
     func startTimer(manager: TimerModel) {
         
-        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
-            self.testingNum += 1
-            print(self.testingNum)
+        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { [self] timer in
+            workTime += 1
+            currentTime += 1
+            print(String(workTime))
+            print(String(currentTime))
         }
     }
     
@@ -35,13 +39,5 @@ class TimerModel: ObservableObject {
     
     // 타이머를 리셋하는 함수(데이터 초기화)
     func resetTimer() { }
-    
-}
-
-class TimeRepository: ObservableObject {
-    
-    @Published var workTime: Int = 0
-    @Published var currentTime: Int = 0
-    @Published var restTime: Int = 0
     
 }

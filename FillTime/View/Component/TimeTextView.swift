@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct TimeTextView: View {
+    var viewModel: TimerManager?
     private var textSize: CGFloat
     
     init(textSize: CGFloat) {
@@ -19,7 +20,7 @@ struct TimeTextView: View {
             .padding(20)
             .font(.system(size: textSize))
             .frame(maxWidth: .infinity)
-            .background(.yellow)
+            .background(.green)
             .cornerRadius(20)
             .padding(.horizontal, 10)
     }
