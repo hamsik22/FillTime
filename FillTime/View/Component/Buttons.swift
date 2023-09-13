@@ -21,8 +21,13 @@ struct BasicButton: View {
     }
     var body: some View {
         Text(buttonText ?? "None Text")
+            .frame(maxWidth: .infinity)
+            .padding(.vertical, 20)
+            .background(.cyan)
+            .cornerRadius(5)
             .padding()
-            .background(.mint)
+            .font(.system(size: 40))
+            .bold()
     }
 }
 

@@ -22,12 +22,15 @@ struct TimerView: View {
             HStack {
                 Button {
                     viewModel?.callStartTimer()
-                } label: { VStack{
-                    Text("Start")
+                } label: {
+                    BasicButton(buttonText: "Start")
+                        .foregroundColor(.black)
                 }
+                Button {
                     
-                }
-                Button { } label: { Text("Stop") }
+                } label: {
+                    BasicButton(buttonText: "Reset") }
+                        .foregroundColor(.black)
             }
         }
     }

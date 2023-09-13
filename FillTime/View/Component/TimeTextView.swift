@@ -20,7 +20,7 @@ struct TimeTextView: View {
             .padding(20)
             .font(.system(size: textSize))
             .frame(maxWidth: .infinity)
-            .background(.green)
+            .background(.gray)
             .cornerRadius(20)
             .padding(.horizontal, 10)
     }
