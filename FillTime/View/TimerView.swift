@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct TimerView: View {
+    
+    var viewModel = TimerManager()
+    
     var body: some View {
         VStack {
             TitleTextView(text: "Work Time")
@@ -17,7 +20,13 @@ struct TimerView: View {
             TitleTextView(text: "Rest Time")
             TimeTextView(textSize: 50)
             HStack {
-                Button { } label: { Text("Start") }
+                Button {
+                    viewModel.startTimer(manager: viewModel)
+                } label: { VStack{
+                    Text("Start")
+                }
+                    
+                }
                 Button { } label: { Text("Stop") }
             }
         }
@@ -26,6 +35,6 @@ struct TimerView: View {
 
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerView()
+        TimerView(viewModel: TimerManager())
     }
 }

@@ -14,14 +14,16 @@ import SwiftUI
  */
 class TimerManager: ObservableObject {
     
-    @Published var timer = Timer()
-    @State var testingNum = 0
+    var timer: Timer?
+    @Published var testingNum = 0
+    var timeRepository: TimeRepository?
     
     // 타이머 인스턴스를 실행하는 함수
-    func startTimer() {
+    func startTimer(manager: TimerManager) {
         
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
+        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true) { timer in
             self.testingNum += 1
+            print(self.testingNum)
         }
     }
     
