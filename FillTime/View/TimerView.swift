@@ -9,35 +9,14 @@ import SwiftUI
 
 struct TimerView: View {
     
-    var viewModel: TimerManager?
     
     var body: some View {
-        VStack {
-            TitleTextView(text: "Work Time")
-            TimeTextView(textSize: 50)
-            TitleTextView(text: "Current Time")
-            TimeTextView(textSize: 30)
-            TitleTextView(text: "Rest Time")
-            TimeTextView(textSize: 50)
-            HStack {
-                Button {
-                    viewModel?.callStartTimer()
-                } label: {
-                    BasicButton(buttonText: "Start")
-                        .foregroundColor(.black)
-                }
-                Button {
-                    
-                } label: {
-                    BasicButton(buttonText: "Reset") }
-                        .foregroundColor(.black)
-            }
-        }
+        Text("Timer View")
     }
 }
 
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerView(viewModel: TimerManager())
+        TimerView()
     }
 }
