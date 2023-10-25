@@ -16,6 +16,9 @@
 		5949F7D52AAE172000E58D5A /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949F7D42AAE172000E58D5A /* TimerView.swift */; };
 		5949F7DE2AB07DC300E58D5A /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949F7DD2AB07DC300E58D5A /* TimerModel.swift */; };
 		5949F7DF2AB0850400E58D5A /* TimerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949F7DD2AB07DC300E58D5A /* TimerModel.swift */; };
+		59A488B62AE829F200C7E812 /* TimeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A488B52AE829F200C7E812 /* TimeText.swift */; };
+		59A488B82AE82BDD00C7E812 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A488B72AE82BDD00C7E812 /* Buttons.swift */; };
+		59A488BA2AE82D4A00C7E812 /* TextBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A488B92AE82D4A00C7E812 /* TextBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		5949F7C72AAE0DD600E58D5A /* FillTimeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillTimeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		5949F7D42AAE172000E58D5A /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		5949F7DD2AB07DC300E58D5A /* TimerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerModel.swift; sourceTree = "<group>"; };
+		59A488B52AE829F200C7E812 /* TimeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeText.swift; sourceTree = "<group>"; };
+		59A488B72AE82BDD00C7E812 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
+		59A488B92AE82D4A00C7E812 /* TextBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				5949F7AA2AAE0DD300E58D5A /* FillTimeApp.swift */,
+				5949F7AC2AAE0DD300E58D5A /* ContentView.swift */,
 				5949F7D62AAF138D00E58D5A /* View */,
 				5949F7DC2AB07D8700E58D5A /* Model */,
 				5949F7B02AAE0DD600E58D5A /* Preview Content */,
@@ -133,7 +140,7 @@
 		5949F7D62AAF138D00E58D5A /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5949F7AC2AAE0DD300E58D5A /* ContentView.swift */,
+				59A488B42AE829DA00C7E812 /* Component */,
 				5949F7D42AAE172000E58D5A /* TimerView.swift */,
 			);
 			path = View;
@@ -145,6 +152,16 @@
 				5949F7DD2AB07DC300E58D5A /* TimerModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		59A488B42AE829DA00C7E812 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				59A488B52AE829F200C7E812 /* TimeText.swift */,
+				59A488B72AE82BDD00C7E812 /* Buttons.swift */,
+				59A488B92AE82D4A00C7E812 /* TextBar.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -280,7 +297,10 @@
 				5949F7D52AAE172000E58D5A /* TimerView.swift in Sources */,
 				5949F7DE2AB07DC300E58D5A /* TimerModel.swift in Sources */,
 				5949F7AD2AAE0DD300E58D5A /* ContentView.swift in Sources */,
+				59A488BA2AE82D4A00C7E812 /* TextBar.swift in Sources */,
+				59A488B82AE82BDD00C7E812 /* Buttons.swift in Sources */,
 				5949F7AB2AAE0DD300E58D5A /* FillTimeApp.swift in Sources */,
+				59A488B62AE829F200C7E812 /* TimeText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
