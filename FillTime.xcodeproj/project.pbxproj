@@ -86,7 +86,6 @@
 			isa = PBXGroup;
 			children = (
 				5949F7A92AAE0DD300E58D5A /* FillTime */,
-				5949F7BA2AAE0DD600E58D5A /* FillTimeTests */,
 				5949F7C42AAE0DD600E58D5A /* FillTimeUITests */,
 				5949F7A82AAE0DD300E58D5A /* Products */,
 			);
@@ -121,13 +120,6 @@
 				5949F7B12AAE0DD600E58D5A /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
-			sourceTree = "<group>";
-		};
-		5949F7BA2AAE0DD600E58D5A /* FillTimeTests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = FillTimeTests;
 			sourceTree = "<group>";
 		};
 		5949F7C42AAE0DD600E58D5A /* FillTimeUITests */ = {
