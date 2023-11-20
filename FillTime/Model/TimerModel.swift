@@ -70,6 +70,7 @@ class TimerModel: ObservableObject {
     // 타이머를 리셋하는 함수(데이터 초기화)
     func resetTimer() { 
         self.timer?.invalidate()
+        self.timer = nil
         workTime = 0
         currentTime = 0
         restTime = 0
