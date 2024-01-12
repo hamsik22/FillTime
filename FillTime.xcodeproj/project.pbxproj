@@ -55,6 +55,7 @@
 		59A488B52AE829F200C7E812 /* TimeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeText.swift; sourceTree = "<group>"; };
 		59A488B72AE82BDD00C7E812 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		59A488B92AE82D4A00C7E812 /* TextBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBar.swift; sourceTree = "<group>"; };
+		C32AAF532B514207005D38F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +105,7 @@
 		5949F7A92AAE0DD300E58D5A /* FillTime */ = {
 			isa = PBXGroup;
 			children = (
+				C32AAF532B514207005D38F1 /* Info.plist */,
 				5949F7AA2AAE0DD300E58D5A /* FillTimeApp.swift */,
 				5949F7AC2AAE0DD300E58D5A /* ContentView.swift */,
 				5949F7D62AAF138D00E58D5A /* View */,
@@ -464,6 +466,7 @@
 				DEVELOPMENT_TEAM = UF3R52LYV7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FillTime/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -498,6 +501,7 @@
 				DEVELOPMENT_TEAM = UF3R52LYV7;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = FillTime/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
