@@ -8,8 +8,23 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @Environment(\.scenePhase) private var scenePhase
+    
     var body: some View {
         TimerView()
+            .onChange(of: scenePhase) { phase in
+                switch phase {
+                case .background:
+                    print("TimerView Entered Background!")
+                case .inactive:
+                    print("TimerView Entered Inactive!")
+                case .active:
+                    print("TimerView Entered Active!")
+                @unknown default:
+                    print("TimerView Entered Unknown Phase!")
+                }
+            }
     }
 }
 

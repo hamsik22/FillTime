@@ -4,7 +4,5 @@
 <dict>
 	<key>BGTaskSchedulerPermittedIdentifiers</key>
 	<array/>
-	<key>UIBackgroundModes</key>
-	<array/>
 </dict>
 </plist>
