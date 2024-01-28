@@ -9,7 +9,7 @@ import SwiftUI
 
 struct TimerView: View {
     
-    @ObservedObject var timerModel = TimerModel()
+    @ObservedObject var timerModel = TimeModel()
     @State var isWorking = false
     
     

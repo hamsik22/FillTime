@@ -12,7 +12,7 @@ import SwiftUI
  TimerModel
  타이머 인스턴스, 타이머에 관여하는 모든 메서드를 가진 클래스
  */
-class TimerModel: ObservableObject {
+class TimeModel: ObservableObject {
     
     var timer: Timer?
     
