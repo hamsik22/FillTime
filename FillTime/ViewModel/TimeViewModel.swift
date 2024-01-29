@@ -9,9 +9,16 @@ import Foundation
 
 class TimeViewModel: ObservableObject {
     
+    @Published var currentTime: Int
+    @Published var workTime: Int
+    @Published var restTime: Int
+    
     private var timeModel: TimeModel
     
-    init(timeModel: TimeModel) {
+    init(currentTime: Int, workTime: Int, restTime: Int, timeModel: TimeModel) {
+        self.currentTime = currentTime
+        self.workTime = workTime
+        self.restTime = restTime
         self.timeModel = timeModel
     }
     
