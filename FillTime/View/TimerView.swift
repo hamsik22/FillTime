@@ -9,14 +9,16 @@ import SwiftUI
 
 struct TimerView: View {
     
+    @ObservedObject var viewModel: TimeViewModel
+    
     var body: some View {
         VStack(alignment: .leading){
         }.padding()
     }
 }
 
-struct TimerView_Previews: PreviewProvider {
-    static var previews: some View {
-        TimerView()
-    }
-}
+//struct TimerView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        TimerView(viewModel: <#TimeViewModel#>)
+//    }
+//}

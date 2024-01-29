@@ -13,12 +13,15 @@ struct FillTimeApp: App {
     @Environment(\.scenePhase) private var scenePhase
     
     var body: some Scene {
+        
+        let timeModel = TimeModel(timer: Timer(), workTime: 0, currentTime: 0, restTime: 0)
+        let viewModel = TimeViewModel(timeModel: timeModel)
+        
         WindowGroup {
-            ContentView()
+            ContentView(viewModel: viewModel)
         }
         .onChange(of: scenePhase) { phase in
             switch phase {
-                
             case .background:
                 print("App Entered Background!")
             case .inactive:

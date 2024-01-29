@@ -10,9 +10,11 @@ import SwiftUI
 struct ContentView: View {
     
     @Environment(\.scenePhase) private var scenePhase
+    @ObservedObject var viewModel: TimeViewModel
+    
     
     var body: some View {
-        TimerView()
+        TimerView(viewModel: viewModel)
             .onChange(of: scenePhase) { phase in
                 switch phase {
                 case .background:
@@ -28,8 +30,8 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView()
+//    }
+//}

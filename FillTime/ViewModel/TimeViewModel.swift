@@ -7,6 +7,7 @@
 
 import Foundation
 
+/**시간 관련 데이터를 다루는 뷰모델*/
 class TimeViewModel: ObservableObject {
     
     @Published var currentTime: Int
@@ -15,10 +16,10 @@ class TimeViewModel: ObservableObject {
     
     private var timeModel: TimeModel
     
-    init(currentTime: Int, workTime: Int, restTime: Int, timeModel: TimeModel) {
-        self.currentTime = currentTime
-        self.workTime = workTime
-        self.restTime = restTime
+    init(timeModel: TimeModel) {
+        self.currentTime = timeModel.currentTime
+        self.workTime = timeModel.workTime
+        self.restTime = timeModel.restTime
         self.timeModel = timeModel
     }
     

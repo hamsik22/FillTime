@@ -10,7 +10,7 @@ import SwiftUI
 
 /**
  TimeModel
- 타이머 인스턴스, 타이머에 관여하는 모든 메서드를 가진 클래스
+ 시간과 관련된 속성 및 인스턴스를 지닌 모델
  */
 struct TimeModel {
     
