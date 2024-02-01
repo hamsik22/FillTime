@@ -14,12 +14,18 @@ struct TimerView: View {
     
     var body: some View {
         VStack(alignment: .leading){
+            Text("Time : \(viewModel.currentTime)")
+            Button(action: {
+                viewModel.startTimer()
+            }, label: {
+                /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
+            })
         }.padding()
     }
 }
 
-//struct TimerView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TimerView(viewModel: <#TimeViewModel#>)
-//    }
-//}
+struct TimerView_Previews: PreviewProvider {
+    static var previews: some View {
+        TimerView(viewModel: TimeViewModel(timeModel: TimeModel(timer: Timer(), workTime: 0, currentTime: 0, restTime: 0)))
+    }
+}

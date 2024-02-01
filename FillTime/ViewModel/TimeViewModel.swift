@@ -14,6 +14,7 @@ class TimeViewModel: ObservableObject {
     @Published var currentTime: Int
     @Published var workTime: Int
     @Published var restTime: Int
+    @Published var timer: Timer
     
     private var timeModel: TimeModel
     
@@ -21,11 +22,17 @@ class TimeViewModel: ObservableObject {
         self.currentTime = timeModel.currentTime
         self.workTime = timeModel.workTime
         self.restTime = timeModel.restTime
+        self.timer = timeModel.timer
         self.timeModel = timeModel
     }
     
     /**타이머 시작*/
-    func startTimer(is mode: Bool) { }
+    func startTimer() { 
+        self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { timer in
+            self.currentTime += 1
+            print(self.currentTime)
+        })
+    }
     /**타이머 정지*/
     func stopTimer() { }
     /**타이머 모드 전환하기*/
