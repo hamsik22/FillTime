@@ -14,7 +14,7 @@ struct FillTimeApp: App {
     
     var body: some Scene {
         
-        let timeModel = TimeModel(timer: Timer(), workTime: 0, currentTime: 0, restTime: 0)
+        let timeModel = TimeModel()
         let viewModel = TimeViewModel(timeModel: timeModel)
         
         WindowGroup {

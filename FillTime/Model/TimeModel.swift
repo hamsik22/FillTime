@@ -14,9 +14,13 @@ import SwiftUI
  */
 struct TimeModel {
     
-    var timer: Timer
-    var workTime: Int
-    var currentTime: Int
-    var restTime: Int
+    var timer: Timer = Timer()
+    var workTime: Int = 0
+    var currentTime: Int = 0
+    var restTime: Int = 0
+    var isWorking: Bool = false
+    
+    var appBackgroundEnterTime: Date = Date()
+    var appActiveEnterTime: Date = Date()
     
 }
