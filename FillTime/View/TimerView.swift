@@ -33,6 +33,7 @@ struct TimerView: View {
                 })
             }
         }.padding()
+            .background(Color.backGround)
     }
 }
 
