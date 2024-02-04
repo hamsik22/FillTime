@@ -19,12 +19,13 @@ struct ContentView: View {
                 switch phase {
                 case .background:
                     print("TimerView Entered Background!")
-                    // TODO: 백그라운드 진입 시간 측정
+                    viewModel.checkPhaseTime(into: false)
                 case .inactive:
                     print("TimerView Entered Inactive!")
                 case .active:
                     print("TimerView Entered Active!")
-                    // TODO: 액티브 진입 시간 측정 + 계산
+                    viewModel.checkPhaseTime(into: true)
+                    viewModel.caculateInactivateTimes(isWorking: viewModel.isWorking)
                 @unknown default:
                     print("TimerView Entered Unknown Phase!")
                 }

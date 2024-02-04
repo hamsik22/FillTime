@@ -66,8 +66,8 @@ class TimeViewModel: ObservableObject {
             print("Reset Timer!")
         }
         /**앱상태 전환시간 측정*/
-        func checkPhaseTime(state: Bool) {
-            if state {
+        func checkPhaseTime(into: Bool) {
+            if into {
                 timeModel.appActiveEnterTime = Date.now
             } else {
                 timeModel.appBackgroundEnterTime = Date.now
@@ -76,11 +76,11 @@ class TimeViewModel: ObservableObject {
         /**앱 비활성화 시간 계산*/
         func caculateInactivateTimes(isWorking: Bool) {
             if isWorking {
-                self.currentTime += Int(timeModel.appActiveEnterTime.distance(to: timeModel.appBackgroundEnterTime))
-                self.workTime += Int(timeModel.appActiveEnterTime.distance(to: timeModel.appBackgroundEnterTime))
+                self.currentTime += Int(timeModel.appBackgroundEnterTime.distance(to: timeModel.appActiveEnterTime))
+                self.workTime += Int(timeModel.appBackgroundEnterTime.distance(to: timeModel.appActiveEnterTime))
             } else {
-                self.currentTime += Int(timeModel.appActiveEnterTime.distance(to: timeModel.appBackgroundEnterTime))
-                self.restTime += Int(timeModel.appActiveEnterTime.distance(to: timeModel.appBackgroundEnterTime))
+                self.currentTime += Int(timeModel.appBackgroundEnterTime.distance(to: timeModel.appActiveEnterTime))
+                self.restTime += Int(timeModel.appBackgroundEnterTime.distance(to: timeModel.appActiveEnterTime))
             }
         }
     }
