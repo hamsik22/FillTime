@@ -16,6 +16,7 @@ struct TextBar: View {
         Text(someTexts)
             .font(.largeTitle)
             .bold()
+            .padding()
     }
 }
 

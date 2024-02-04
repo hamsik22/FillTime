@@ -53,6 +53,7 @@ class TimeViewModel: ObservableObject {
         /**타이머 정지*/
         func stopTimer() {
             self.timer.invalidate()
+            print("Stop Timer!")
         }
         
         /**타이머 리셋*/
@@ -61,6 +62,8 @@ class TimeViewModel: ObservableObject {
             self.currentTime = 0
             self.workTime = 0
             self.restTime = 0
+            self.isWorking = false
+            print("Reset Timer!")
         }
         /**앱상태 전환시간 측정*/
         func checkPhaseTime(state: Bool) {
