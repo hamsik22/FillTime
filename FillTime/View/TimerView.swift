@@ -4,52 +4,45 @@
 //
 //  Created by 황석현 on 2023/09/11.
 //
+// TODO: 뷰 레이아웃 재구현
 
 import SwiftUI
 
 struct TimerView: View {
     
-    @ObservedObject var timerModel = TimerModel()
-    @State var isWorking = false
-    
+    @ObservedObject var viewModel: TimeViewModel
     
     var body: some View {
         VStack(alignment: .leading){
-            TextBar(someTexts: "Work Time")
-            TimeText(timeData: timerModel.workTime)
+            TextBar(someTexts: "Working Time")
+            TimeText(timeData: viewModel.workTime)
             TextBar(someTexts: "Current Time")
-            TimeText(timeData: timerModel.currentTime)
+            TimeText(timeData: viewModel.currentTime)
             TextBar(someTexts: "Rest Time")
-            TimeText(timeData: timerModel.restTime)
-            HStack{
+            TimeText(timeData: viewModel.restTime)
+            HStack {
                 Button(action: {
-                    // 만약 타이머가 유효하지 않다면
-                    if timerModel.timer == nil {
-                        isWorking = true
-                        timerModel.startTimer(is: isWorking)
-                    } else {
-                        isWorking.toggle()
-                        timerModel.switchTimer(themode: isWorking)
-                    }
+                    viewModel.isWorking.toggle()
+                    viewModel.startTimer(isWorking: viewModel.isWorking)
                 }, label: {
-                    if timerModel.timer == nil {
-                        Buttons(buttonColor: .orange, textString: "Start")
-                    }else {
-                        Buttons(buttonColor: .orange, textString: "Switch")
+                    if viewModel.isWorking {
+                        Buttons(buttonColor: .blue, textString: "Rest!")
+                    } else {
+                        Buttons(buttonColor: .blue, textString: "Work!")
                     }
                 })
                 Button(action: {
-                    timerModel.resetTimer()
+                        viewModel.resetTimer()
                 }, label: {
-                    Buttons(buttonColor: .indigo, textString: "Stop")
+                        Buttons(buttonColor: .orange, textString: "Reset")
                 })
             }
-        }.padding()
+        }
     }
 }
 
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerView()
+        TimerView(viewModel: TimeViewModel(timeModel: TimeModel()))
     }
 }

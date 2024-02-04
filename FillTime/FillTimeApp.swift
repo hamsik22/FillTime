@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct FillTimeApp: App {
+    
     var body: some Scene {
+        
+        let timeModel = TimeModel()
+        let viewModel = TimeViewModel(timeModel: timeModel)
         WindowGroup {
-            ContentView()
+            ContentView(viewModel: viewModel)
         }
     }
 }
