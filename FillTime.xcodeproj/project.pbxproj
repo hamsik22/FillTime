@@ -20,6 +20,7 @@
 		59A488B62AE829F200C7E812 /* TimeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A488B52AE829F200C7E812 /* TimeText.swift */; };
 		59A488B82AE82BDD00C7E812 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A488B72AE82BDD00C7E812 /* Buttons.swift */; };
 		59A488BA2AE82D4A00C7E812 /* TextBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A488B92AE82D4A00C7E812 /* TextBar.swift */; };
+		911673112B70C94A005A490D /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911673102B70C94A005A490D /* UserData.swift */; };
 		91F21E7D2B662E130030EC5C /* TimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F21E7C2B662E130030EC5C /* TimeViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +57,7 @@
 		59A488B52AE829F200C7E812 /* TimeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeText.swift; sourceTree = "<group>"; };
 		59A488B72AE82BDD00C7E812 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		59A488B92AE82D4A00C7E812 /* TextBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBar.swift; sourceTree = "<group>"; };
+		911673102B70C94A005A490D /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		91F21E7C2B662E130030EC5C /* TimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewModel.swift; sourceTree = "<group>"; };
 		C32AAF532B514207005D38F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -150,6 +152,7 @@
 			isa = PBXGroup;
 			children = (
 				5949F7DD2AB07DC300E58D5A /* TimeModel.swift */,
+				911673102B70C94A005A490D /* UserData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 				5949F7D52AAE172000E58D5A /* TimerView.swift in Sources */,
 				91F21E7D2B662E130030EC5C /* TimeViewModel.swift in Sources */,
 				5949F7DE2AB07DC300E58D5A /* TimeModel.swift in Sources */,
+				911673112B70C94A005A490D /* UserData.swift in Sources */,
 				5949F7AD2AAE0DD300E58D5A /* ContentView.swift in Sources */,
 				59A488BA2AE82D4A00C7E812 /* TextBar.swift in Sources */,
 				59A488B82AE82BDD00C7E812 /* Buttons.swift in Sources */,
@@ -525,6 +529,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				"MARKETING_VERSION[sdk=iphoneos*]" = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.payback9488.FillTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
