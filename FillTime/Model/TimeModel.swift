@@ -14,6 +14,9 @@ import SwiftUI
  */
 struct TimeModel {
     
+    let defaults: UserDefaults
+    var userData = "UserData"
+    
     var timer: Timer = Timer()
     var workTime: Int = 0
     var currentTime: Int = 0
@@ -22,5 +25,6 @@ struct TimeModel {
     
     var appBackgroundEnterTime: Date = Date()
     var appActiveEnterTime: Date = Date()
+    
     
 }

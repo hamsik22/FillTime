@@ -4,7 +4,6 @@
 //
 //  Created by 황석현 on 1/28/24.
 //
-// TODO: 시간관련 함수 정의 필요
 
 import Foundation
 
@@ -16,6 +15,7 @@ class TimeViewModel: ObservableObject {
     @Published var restTime: Int
     @Published var timer: Timer
     @Published var isWorking: Bool
+    @Published var defaults: UserDefaults
     
     private var timeModel: TimeModel
     
@@ -25,6 +25,7 @@ class TimeViewModel: ObservableObject {
         self.restTime = timeModel.restTime
         self.timer = timeModel.timer
         self.isWorking = timeModel.isWorking
+        self.defaults = timeModel.defaults
         self.timeModel = timeModel
     }
     
@@ -58,7 +59,13 @@ class TimeViewModel: ObservableObject {
         
         /**타이머 리셋*/
         func resetTimer() {
-            self.timer.invalidate()
+            stopTimer()
+            if self.defaults.integer(forKey: timeModel.userData) != 0 {
+                let temp = self.defaults.integer(forKey: timeModel.userData)
+                self.defaults.set((temp + self.currentTime + self.workTime), forKey: timeModel.userData)
+            } else {
+                self.defaults.set((self.currentTime + self.workTime), forKey: timeModel.userData)
+            }
             self.currentTime = 0
             self.workTime = 0
             self.restTime = 0
