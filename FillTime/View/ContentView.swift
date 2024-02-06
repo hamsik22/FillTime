@@ -11,7 +11,7 @@ struct ContentView: View {
     
     @Environment(\.scenePhase) private var scenePhase
     @ObservedObject var timeVM: TimeViewModel
-    @ObservedObject var sysyemVM: SystemViewModel
+    
     
     
     var body: some View {

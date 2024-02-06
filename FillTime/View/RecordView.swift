@@ -12,8 +12,7 @@ struct RecordView: View {
     
     var body: some View {
         VStack {
-            TextBar(someTexts: "TotalTime")
-            // TODO: forKey에 접근하는 구조 변형 - 뷰가 모델에 직접 관여중
+            TextBar(someTexts: "Total Work Time is...")
             TimeText(timeData: UserDefaults.standard.integer(forKey: Defaluts.userData.rawValue))
         }
     }

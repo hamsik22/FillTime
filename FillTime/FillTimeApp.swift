@@ -12,13 +12,11 @@ struct FillTimeApp: App {
     
     var body: some Scene {
         
-        let systemModel = SystemModel()
-        let systemVM = SystemViewModel(systemModel: systemModel)
         let timeModel = TimeModel()
         let timeVM = TimeViewModel(timeModel: timeModel)
         
         WindowGroup {
-            ContentView(timeVM: timeVM, sysyemVM: systemVM)
+            ContentView(timeVM: timeVM)
         }
     }
 }
