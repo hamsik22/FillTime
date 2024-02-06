@@ -61,8 +61,8 @@ class TimeViewModel: ObservableObject {
         func resetTimer() {
             stopTimer()
             if self.defaults.integer(forKey: Defaluts.userData.rawValue) != 0 {
-                let temp = self.defaults.integer(forKey: Defaluts.userData.rawValue)
-                self.defaults.set((temp + self.currentTime + self.workTime), forKey: Defaluts.userData.rawValue)
+                    let temp = self.defaults.integer(forKey: Defaluts.userData.rawValue)
+                    self.defaults.set((temp + self.workTime), forKey: Defaluts.userData.rawValue)
             } else {
                 self.defaults.set((self.currentTime + self.workTime), forKey: Defaluts.userData.rawValue)
             }
