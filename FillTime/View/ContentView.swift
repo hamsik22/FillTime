@@ -38,16 +38,26 @@ struct ContentView: View {
                         print("TimerView Entered Unknown Phase!")
                     }
                 }
-            .tabItem { Text("Timer View") }.tag(1)
+                .tabItem {
+                    VStack{
+                        Image(systemName: "timer.circle.fill")
+                        Text("Timer View")
+                    }
+                }.tag(1)
             
             RecordView(timeVM: timeVM)
-            .tabItem { Text("Record View") }.tag(2)
+                .tabItem {
+                    VStack{
+                        Image(systemName: "list.bullet.clipboard.fill")
+                        Text("Record View")
+                    }
+                }.tag(2)
         }
     }
 }
 
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ContentView()
-//    }
-//}
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        ContentView(timeVM: TimeViewModel(timeModel: TimeModel()))
+    }
+}
