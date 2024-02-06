@@ -15,8 +15,16 @@ struct TimerView: View {
         VStack(alignment: .leading){
             TextBar(someTexts: SystemText.workTime.rawValue)
             TimeText(timeData: timeVM.workTime)
-            TextBar(someTexts: "Current Time")
-            TimeText(timeData: timeVM.currentTime)
+            if timeVM.timer.isValid {
+                if timeVM.isWorking {
+                    TextBar(someTexts: SystemText.currentTime.working.rawValue)
+                    TimeText(timeData: timeVM.currentTime)
+
+                } else {
+                    TextBar(someTexts: SystemText.currentTime.rest.rawValue)
+                    TimeText(timeData: timeVM.currentTime)
+                }
+            } else { }
             TextBar(someTexts: "Rest Time")
             TimeText(timeData: timeVM.restTime)
             HStack {

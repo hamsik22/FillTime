@@ -10,8 +10,12 @@ import Foundation
 enum SystemText: String {
     case workTime = "Work Time"
     case restTime = "Rest Time"
-    case currentTime = "Current Time"
     case record = "Record"
+    
+    enum currentTime: String {
+        case working = "You Worked for.."
+        case rest = "You Rested for.."
+    }
 }
 
 enum Defaluts: String {
