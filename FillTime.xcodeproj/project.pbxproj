@@ -20,6 +20,10 @@
 		59A488B62AE829F200C7E812 /* TimeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A488B52AE829F200C7E812 /* TimeText.swift */; };
 		59A488B82AE82BDD00C7E812 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A488B72AE82BDD00C7E812 /* Buttons.swift */; };
 		59A488BA2AE82D4A00C7E812 /* TextBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A488B92AE82D4A00C7E812 /* TextBar.swift */; };
+		911673112B70C94A005A490D /* SystemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911673102B70C94A005A490D /* SystemModel.swift */; };
+		91C4E8082B71DA71004C6523 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C4E8072B71DA71004C6523 /* RecordView.swift */; };
+		91C4E80C2B71EE9C004C6523 /* SystemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C4E80B2B71EE9C004C6523 /* SystemViewModel.swift */; };
+		91C4E80E2B72013D004C6523 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C4E80D2B72013D004C6523 /* Enums.swift */; };
 		91F21E7D2B662E130030EC5C /* TimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F21E7C2B662E130030EC5C /* TimeViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -56,6 +60,10 @@
 		59A488B52AE829F200C7E812 /* TimeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeText.swift; sourceTree = "<group>"; };
 		59A488B72AE82BDD00C7E812 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		59A488B92AE82D4A00C7E812 /* TextBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBar.swift; sourceTree = "<group>"; };
+		911673102B70C94A005A490D /* SystemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemModel.swift; sourceTree = "<group>"; };
+		91C4E8072B71DA71004C6523 /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
+		91C4E80B2B71EE9C004C6523 /* SystemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemViewModel.swift; sourceTree = "<group>"; };
+		91C4E80D2B72013D004C6523 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
 		91F21E7C2B662E130030EC5C /* TimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewModel.swift; sourceTree = "<group>"; };
 		C32AAF532B514207005D38F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -109,6 +117,7 @@
 			children = (
 				C32AAF532B514207005D38F1 /* Info.plist */,
 				5949F7AA2AAE0DD300E58D5A /* FillTimeApp.swift */,
+				91C4E80D2B72013D004C6523 /* Enums.swift */,
 				5949F7DC2AB07D8700E58D5A /* Model */,
 				5949F7D62AAF138D00E58D5A /* View */,
 				91F21E7B2B662DFC0030EC5C /* ViewModel */,
@@ -141,6 +150,7 @@
 			children = (
 				5949F7AC2AAE0DD300E58D5A /* ContentView.swift */,
 				5949F7D42AAE172000E58D5A /* TimerView.swift */,
+				91C4E8072B71DA71004C6523 /* RecordView.swift */,
 				59A488B42AE829DA00C7E812 /* Component */,
 			);
 			path = View;
@@ -150,6 +160,7 @@
 			isa = PBXGroup;
 			children = (
 				5949F7DD2AB07DC300E58D5A /* TimeModel.swift */,
+				911673102B70C94A005A490D /* SystemModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -168,6 +179,7 @@
 			isa = PBXGroup;
 			children = (
 				91F21E7C2B662E130030EC5C /* TimeViewModel.swift */,
+				91C4E80B2B71EE9C004C6523 /* SystemViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -304,12 +316,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				5949F7D52AAE172000E58D5A /* TimerView.swift in Sources */,
+				91C4E80C2B71EE9C004C6523 /* SystemViewModel.swift in Sources */,
 				91F21E7D2B662E130030EC5C /* TimeViewModel.swift in Sources */,
 				5949F7DE2AB07DC300E58D5A /* TimeModel.swift in Sources */,
+				91C4E8082B71DA71004C6523 /* RecordView.swift in Sources */,
+				911673112B70C94A005A490D /* SystemModel.swift in Sources */,
 				5949F7AD2AAE0DD300E58D5A /* ContentView.swift in Sources */,
 				59A488BA2AE82D4A00C7E812 /* TextBar.swift in Sources */,
 				59A488B82AE82BDD00C7E812 /* Buttons.swift in Sources */,
 				5949F7AB2AAE0DD300E58D5A /* FillTimeApp.swift in Sources */,
+				91C4E80E2B72013D004C6523 /* Enums.swift in Sources */,
 				59A488B62AE829F200C7E812 /* TimeText.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -525,6 +541,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				"MARKETING_VERSION[sdk=iphoneos*]" = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.payback9488.FillTime;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";

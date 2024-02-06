@@ -23,4 +23,6 @@ struct TimeModel {
     var appBackgroundEnterTime: Date = Date()
     var appActiveEnterTime: Date = Date()
     
+    var recordedTime: Int = UserDefaults.standard.integer(forKey: Defaluts.userData.rawValue)
+    
 }

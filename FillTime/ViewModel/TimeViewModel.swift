@@ -4,28 +4,32 @@
 //
 //  Created by 황석현 on 1/28/24.
 //
-// TODO: 시간관련 함수 정의 필요
 
 import Foundation
 
 /**시간 관련 데이터를 다루는 뷰모델*/
 class TimeViewModel: ObservableObject {
     
+    private var timeModel: TimeModel
+    
     @Published var currentTime: Int
     @Published var workTime: Int
     @Published var restTime: Int
-    @Published var timer: Timer
     @Published var isWorking: Bool
+    @Published var recordedTime: Int
     
-    private var timeModel: TimeModel
+    var timer: Timer
+    var defaults: UserDefaults
     
     init(timeModel: TimeModel) {
+        self.timeModel = timeModel
         self.currentTime = timeModel.currentTime
         self.workTime = timeModel.workTime
         self.restTime = timeModel.restTime
-        self.timer = timeModel.timer
         self.isWorking = timeModel.isWorking
-        self.timeModel = timeModel
+        self.recordedTime = timeModel.recordedTime
+        self.timer = timeModel.timer
+        self.defaults = UserDefaults()
     }
     
         /**입력에 따른 타이머 시작*/
@@ -36,8 +40,10 @@ class TimeViewModel: ObservableObject {
                 self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { timer in
                     self.currentTime += 1
                     self.workTime += 1
+                    self.recordedTime += 1
                     print("CurrentTime : \(self.currentTime)")
                     print("WorkTime : \(self.workTime)")
+                    print("Recorded Time : \(self.timeModel.recordedTime)")
                 })
             } else {
                 self.currentTime = 0
@@ -58,7 +64,7 @@ class TimeViewModel: ObservableObject {
         
         /**타이머 리셋*/
         func resetTimer() {
-            self.timer.invalidate()
+            stopTimer()
             self.currentTime = 0
             self.workTime = 0
             self.restTime = 0
