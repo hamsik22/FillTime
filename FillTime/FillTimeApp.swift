@@ -13,10 +13,12 @@ struct FillTimeApp: App {
     var body: some Scene {
         
         let standard = UserDefaults.standard
+        
+        let systemModel = SystemModel()
         let timeModel = TimeModel(defaults: standard)
-        let viewModel = TimeViewModel(timeModel: timeModel)
+        let timeVM = TimeViewModel(timeModel: timeModel)
         WindowGroup {
-            ContentView(viewModel: viewModel)
+            ContentView(timeVM: timeVM)
         }
     }
 }
