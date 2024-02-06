@@ -65,11 +65,6 @@ class TimeViewModel: ObservableObject {
         /**타이머 리셋*/
         func resetTimer() {
             stopTimer()
-            if self.defaults.integer(forKey: Defaluts.userData.rawValue) != 0 {
-                self.defaults.set((self.recordedTime), forKey: Defaluts.userData.rawValue)
-            } else {
-                self.defaults.set((self.workTime), forKey: Defaluts.userData.rawValue)
-            }
             self.currentTime = 0
             self.workTime = 0
             self.restTime = 0
