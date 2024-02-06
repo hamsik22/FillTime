@@ -15,7 +15,7 @@ class TimeViewModel: ObservableObject {
     @Published var restTime: Int
     @Published var timer: Timer
     @Published var isWorking: Bool
-    @Published var defaults: UserDefaults
+    var defaults: UserDefaults
     
     private var timeModel: TimeModel
     
@@ -25,8 +25,8 @@ class TimeViewModel: ObservableObject {
         self.restTime = timeModel.restTime
         self.timer = timeModel.timer
         self.isWorking = timeModel.isWorking
-        self.defaults = timeModel.defaults
         self.timeModel = timeModel
+        self.defaults = UserDefaults()
     }
     
         /**입력에 따른 타이머 시작*/
@@ -60,11 +60,11 @@ class TimeViewModel: ObservableObject {
         /**타이머 리셋*/
         func resetTimer() {
             stopTimer()
-            if self.defaults.integer(forKey: timeModel.userData) != 0 {
-                let temp = self.defaults.integer(forKey: timeModel.userData)
-                self.defaults.set((temp + self.currentTime + self.workTime), forKey: timeModel.userData)
+            if self.defaults.integer(forKey: Defaluts.userData.rawValue) != 0 {
+                let temp = self.defaults.integer(forKey: Defaluts.userData.rawValue)
+                self.defaults.set((temp + self.currentTime + self.workTime), forKey: Defaluts.userData.rawValue)
             } else {
-                self.defaults.set((self.currentTime + self.workTime), forKey: timeModel.userData)
+                self.defaults.set((self.currentTime + self.workTime), forKey: Defaluts.userData.rawValue)
             }
             self.currentTime = 0
             self.workTime = 0

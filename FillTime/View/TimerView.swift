@@ -9,29 +9,29 @@ import SwiftUI
 
 struct TimerView: View {
     
-    @ObservedObject var viewModel: TimeViewModel
+    @ObservedObject var timeVM: TimeViewModel
     
     var body: some View {
         VStack(alignment: .leading){
-            TextBar(someTexts: "Working Time")
-            TimeText(timeData: viewModel.workTime)
+            TextBar(someTexts: SystemText.workTime.rawValue)
+            TimeText(timeData: timeVM.workTime)
             TextBar(someTexts: "Current Time")
-            TimeText(timeData: viewModel.currentTime)
+            TimeText(timeData: timeVM.currentTime)
             TextBar(someTexts: "Rest Time")
-            TimeText(timeData: viewModel.restTime)
+            TimeText(timeData: timeVM.restTime)
             HStack {
                 Button(action: {
-                    viewModel.isWorking.toggle()
-                    viewModel.startTimer(isWorking: viewModel.isWorking)
+                    timeVM.isWorking.toggle()
+                    timeVM.startTimer(isWorking: timeVM.isWorking)
                 }, label: {
-                    if viewModel.isWorking {
+                    if timeVM.isWorking {
                         Buttons(buttonColor: .blue, textString: "Rest!")
                     } else {
                         Buttons(buttonColor: .blue, textString: "Work!")
                     }
                 })
                 Button(action: {
-                        viewModel.resetTimer()
+                    timeVM.resetTimer()
                 }, label: {
                         Buttons(buttonColor: .orange, textString: "Reset")
                 })
@@ -42,6 +42,6 @@ struct TimerView: View {
 
 struct TimerView_Previews: PreviewProvider {
     static var previews: some View {
-        TimerView(viewModel: TimeViewModel(timeModel: TimeModel(defaults: UserDefaults())))
+        TimerView(timeVM: TimeViewModel(timeModel: TimeModel()))
     }
 }

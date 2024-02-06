@@ -11,12 +11,13 @@ struct ContentView: View {
     
     @Environment(\.scenePhase) private var scenePhase
     @ObservedObject var timeVM: TimeViewModel
+    @ObservedObject var sysyemVM: SystemViewModel
     
     
     var body: some View {
         
-        TabView(selection: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Selection@*/.constant(1)/*@END_MENU_TOKEN@*/) {
-            TimerView(viewModel: timeVM)
+        TabView {
+            TimerView(timeVM: timeVM)
                 .onChange(of: scenePhase) { phase in
                     switch phase {
                     case .background:
@@ -34,7 +35,7 @@ struct ContentView: View {
                 }
             .tabItem { Text("Timer View") }.tag(1)
             
-            RecordView(viewModel: timeVM)
+            RecordView(timeVM: timeVM)
             .tabItem { Text("Record View") }.tag(2)
         }
     }

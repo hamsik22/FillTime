@@ -8,18 +8,18 @@ import SwiftUI
 
 struct RecordView: View {
     
-    @ObservedObject var viewModel: TimeViewModel
+    @ObservedObject var timeVM: TimeViewModel
     
     var body: some View {
         VStack {
             TextBar(someTexts: "TotalTime")
             // TODO: forKey에 접근하는 구조 변형 - 뷰가 모델에 직접 관여중
-            TimeText(timeData: viewModel.defaults.integer(forKey: "UserData"))
+            TimeText(timeData: UserDefaults.standard.integer(forKey: Defaluts.userData.rawValue))
         }
     }
 }
 
 #Preview {
-    RecordView(viewModel: TimeViewModel(timeModel: TimeModel(defaults: UserDefaults())))
+    RecordView(timeVM: TimeViewModel(timeModel: TimeModel()))
 }
 

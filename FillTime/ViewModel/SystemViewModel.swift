@@ -6,3 +6,13 @@
 //
 
 import Foundation
+
+class SystemViewModel: ObservableObject {
+    
+    private var systemModel: SystemModel
+    
+    init(systemModel: SystemModel) {
+        self.systemModel = systemModel
+    }
+}
+
