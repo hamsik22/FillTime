@@ -25,7 +25,7 @@ struct TimerView: View {
                     TimeText(timeData: timeVM.currentTime)
                 }
             } else { }
-            TextBar(someTexts: "Rest Time")
+            TextBar(someTexts: SystemText.restTime.rawValue)
             TimeText(timeData: timeVM.restTime)
             HStack {
                 Button(action: {
