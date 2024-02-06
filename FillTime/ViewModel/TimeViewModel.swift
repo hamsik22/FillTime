@@ -43,7 +43,7 @@ class TimeViewModel: ObservableObject {
                     self.recordedTime += 1
                     print("CurrentTime : \(self.currentTime)")
                     print("WorkTime : \(self.workTime)")
-                    print("Recorded Time : \(self.timeModel.recordedTime)")
+                    print("Recorded Time : \(self.recordedTime)")
                 })
             } else {
                 self.currentTime = 0

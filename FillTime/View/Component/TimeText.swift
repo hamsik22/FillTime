@@ -19,7 +19,7 @@ struct TimeText: View {
             .font(.title)
             .foregroundColor(.primary)
             .cornerRadius(30)
-            .padding()
+            .padding(.horizontal, 20)
     }
 }
 

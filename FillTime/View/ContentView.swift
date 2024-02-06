@@ -12,10 +12,7 @@ struct ContentView: View {
     @Environment(\.scenePhase) private var scenePhase
     @ObservedObject var timeVM: TimeViewModel
     
-    
-    
     var body: some View {
-        
         TabView {
             TimerView(timeVM: timeVM)
                 .onChange(of: scenePhase) { phase in
