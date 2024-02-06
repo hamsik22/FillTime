@@ -13,7 +13,7 @@ struct RecordView: View {
     var body: some View {
         VStack {
             TextBar(someTexts: "Total Work Time is...")
-            TimeText(timeData: UserDefaults.standard.integer(forKey: Defaluts.userData.rawValue))
+            TimeText(timeData: timeVM.recordedTime)
         }
     }
 }

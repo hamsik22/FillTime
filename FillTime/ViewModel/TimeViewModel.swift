@@ -10,22 +10,25 @@ import Foundation
 /**시간 관련 데이터를 다루는 뷰모델*/
 class TimeViewModel: ObservableObject {
     
+    private var timeModel: TimeModel
+    
     @Published var currentTime: Int
     @Published var workTime: Int
     @Published var restTime: Int
-    @Published var timer: Timer
     @Published var isWorking: Bool
+    @Published var recordedTime: Int
+    
+    var timer: Timer
     var defaults: UserDefaults
     
-    private var timeModel: TimeModel
-    
     init(timeModel: TimeModel) {
+        self.timeModel = timeModel
         self.currentTime = timeModel.currentTime
         self.workTime = timeModel.workTime
         self.restTime = timeModel.restTime
-        self.timer = timeModel.timer
         self.isWorking = timeModel.isWorking
-        self.timeModel = timeModel
+        self.recordedTime = timeModel.recordedTime
+        self.timer = timeModel.timer
         self.defaults = UserDefaults()
     }
     
@@ -37,8 +40,10 @@ class TimeViewModel: ObservableObject {
                 self.timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { timer in
                     self.currentTime += 1
                     self.workTime += 1
+                    self.recordedTime += 1
                     print("CurrentTime : \(self.currentTime)")
                     print("WorkTime : \(self.workTime)")
+                    print("Recorded Time : \(self.timeModel.recordedTime)")
                 })
             } else {
                 self.currentTime = 0
@@ -61,10 +66,9 @@ class TimeViewModel: ObservableObject {
         func resetTimer() {
             stopTimer()
             if self.defaults.integer(forKey: Defaluts.userData.rawValue) != 0 {
-                    let temp = self.defaults.integer(forKey: Defaluts.userData.rawValue)
-                    self.defaults.set((temp + self.workTime), forKey: Defaluts.userData.rawValue)
+                self.defaults.set((self.recordedTime), forKey: Defaluts.userData.rawValue)
             } else {
-                self.defaults.set((self.currentTime + self.workTime), forKey: Defaluts.userData.rawValue)
+                self.defaults.set((self.workTime), forKey: Defaluts.userData.rawValue)
             }
             self.currentTime = 0
             self.workTime = 0
