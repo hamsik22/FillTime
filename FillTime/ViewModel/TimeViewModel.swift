@@ -84,6 +84,7 @@ class TimeViewModel: ObservableObject {
             if isWorking {
                 self.currentTime += Int(timeModel.appBackgroundEnterTime.distance(to: timeModel.appActiveEnterTime))
                 self.workTime += Int(timeModel.appBackgroundEnterTime.distance(to: timeModel.appActiveEnterTime))
+                self.recordedTime += Int(timeModel.appBackgroundEnterTime.distance(to: timeModel.appActiveEnterTime))
             } else {
                 self.currentTime += Int(timeModel.appBackgroundEnterTime.distance(to: timeModel.appActiveEnterTime))
                 self.restTime += Int(timeModel.appBackgroundEnterTime.distance(to: timeModel.appActiveEnterTime))
