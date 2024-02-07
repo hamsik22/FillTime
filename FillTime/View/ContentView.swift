@@ -22,10 +22,12 @@ struct ContentView: View {
                         timeVM.checkPhaseTime(into: false)
                     case .inactive:
                         print("TimerView Entered Inactive!")
-                        if UserDefaults.standard.integer(forKey: Defaluts.userData.rawValue) != 0 {
-                            UserDefaults.standard.set((timeVM.recordedTime), forKey: Defaluts.userData.rawValue)
-                        } else {
-                            UserDefaults.standard.set((timeVM.workTime), forKey: Defaluts.userData.rawValue)
+                        if timeVM.timer.isValid {
+                            if UserDefaults.standard.integer(forKey: Defaluts.userData.rawValue) != 0 {
+                                UserDefaults.standard.set((timeVM.recordedTime), forKey: Defaluts.userData.rawValue)
+                            } else {
+                                UserDefaults.standard.set((timeVM.workTime), forKey: Defaluts.userData.rawValue)
+                            }
                         }
                     case .active:
                         print("TimerView Entered Active!")
