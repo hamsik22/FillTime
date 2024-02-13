@@ -21,7 +21,7 @@
 		59A488B82AE82BDD00C7E812 /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A488B72AE82BDD00C7E812 /* Buttons.swift */; };
 		59A488BA2AE82D4A00C7E812 /* TextBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59A488B92AE82D4A00C7E812 /* TextBar.swift */; };
 		911673112B70C94A005A490D /* SystemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 911673102B70C94A005A490D /* SystemModel.swift */; };
-		917C54922B7B235F0092E9E1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 917C54912B7B235F0092E9E1 /* GoogleService-Info.plist */; };
+		917C54942B7B26470092E9E1 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 917C54932B7B26470092E9E1 /* GoogleService-Info.plist */; };
 		91C4E8082B71DA71004C6523 /* RecordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C4E8072B71DA71004C6523 /* RecordView.swift */; };
 		91C4E80C2B71EE9C004C6523 /* SystemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C4E80B2B71EE9C004C6523 /* SystemViewModel.swift */; };
 		91C4E80E2B72013D004C6523 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C4E80D2B72013D004C6523 /* Enums.swift */; };
@@ -62,7 +62,7 @@
 		59A488B72AE82BDD00C7E812 /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 		59A488B92AE82D4A00C7E812 /* TextBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBar.swift; sourceTree = "<group>"; };
 		911673102B70C94A005A490D /* SystemModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemModel.swift; sourceTree = "<group>"; };
-		917C54912B7B235F0092E9E1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		917C54932B7B26470092E9E1 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		91C4E8072B71DA71004C6523 /* RecordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordView.swift; sourceTree = "<group>"; };
 		91C4E80B2B71EE9C004C6523 /* SystemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemViewModel.swift; sourceTree = "<group>"; };
 		91C4E80D2B72013D004C6523 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
@@ -117,7 +117,7 @@
 		5949F7A92AAE0DD300E58D5A /* FillTime */ = {
 			isa = PBXGroup;
 			children = (
-				917C54912B7B235F0092E9E1 /* GoogleService-Info.plist */,
+				917C54932B7B26470092E9E1 /* GoogleService-Info.plist */,
 				C32AAF532B514207005D38F1 /* Info.plist */,
 				5949F7AA2AAE0DD300E58D5A /* FillTimeApp.swift */,
 				91C4E80D2B72013D004C6523 /* Enums.swift */,
@@ -292,7 +292,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				59135F992AF9436C00F2C892 /* Launch Screen.storyboard in Resources */,
-				917C54922B7B235F0092E9E1 /* GoogleService-Info.plist in Resources */,
+				917C54942B7B26470092E9E1 /* GoogleService-Info.plist in Resources */,
 				5949F7B22AAE0DD600E58D5A /* Preview Assets.xcassets in Resources */,
 				5949F7AF2AAE0DD600E58D5A /* Assets.xcassets in Resources */,
 			);
