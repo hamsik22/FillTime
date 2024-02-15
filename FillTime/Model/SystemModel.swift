@@ -7,6 +7,17 @@
 
 import Foundation
 
-struct SystemModel {
+struct UserTimeData {
     
+    var workTime: Int
+    var restTime: Int
+    var dateLog: Date
+    // TODO: make UID property
+    func getDictionary() -> [String:Any] {
+        return [
+            "workTime" : workTime,
+            "restTime" : restTime,
+            "dateLog" : dateLog,
+            // TODO: UID property
+    ]}
 }
