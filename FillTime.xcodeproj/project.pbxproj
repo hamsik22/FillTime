@@ -26,6 +26,8 @@
 		91C4E80C2B71EE9C004C6523 /* SystemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C4E80B2B71EE9C004C6523 /* SystemViewModel.swift */; };
 		91C4E80E2B72013D004C6523 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91C4E80D2B72013D004C6523 /* Enums.swift */; };
 		91F21E7D2B662E130030EC5C /* TimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F21E7C2B662E130030EC5C /* TimeViewModel.swift */; };
+		C3B14A652B7E07540060F7EC /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = C3B14A642B7E07540060F7EC /* FirebaseFirestore */; };
+		C3B14A672B7E07540060F7EC /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = C3B14A662B7E07540060F7EC /* FirebaseFirestoreSwift */; };
 		C3F9ECCA2B7C9E1F006820CB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C3F9ECC92B7C9E1F006820CB /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +79,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				91AF7EE32B7B2BDC00A74C68 /* FirebaseAnalytics in Frameworks */,
+				C3B14A652B7E07540060F7EC /* FirebaseFirestore in Frameworks */,
+				C3B14A672B7E07540060F7EC /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -207,6 +211,8 @@
 			name = FillTime;
 			packageProductDependencies = (
 				91AF7EE22B7B2BDC00A74C68 /* FirebaseAnalytics */,
+				C3B14A642B7E07540060F7EC /* FirebaseFirestore */,
+				C3B14A662B7E07540060F7EC /* FirebaseFirestoreSwift */,
 			);
 			productName = FillTime;
 			productReference = 5949F7A72AAE0DD300E58D5A /* FillTime.app */;
@@ -702,6 +708,14 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 917C54952B7B27640092E9E1 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
+		};
+		C3B14A642B7E07540060F7EC /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FirebaseFirestore;
+		};
+		C3B14A662B7E07540060F7EC /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = FirebaseFirestoreSwift;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

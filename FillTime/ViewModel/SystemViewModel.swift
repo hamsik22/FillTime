@@ -6,13 +6,9 @@
 //
 
 import Foundation
+import FirebaseFirestore
+import FirebaseFirestoreInternalWrapper
 
-class SystemViewModel: ObservableObject {
-    
-    private var systemModel: SystemModel
-    
-    init(systemModel: SystemModel) {
-        self.systemModel = systemModel
-    }
+class FirestoreViewModel {
 }
 

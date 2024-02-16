@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct UserTimeData {
+struct FirestoreData {
     
     var workTime: Int
     var restTime: Int
@@ -17,7 +17,7 @@ struct UserTimeData {
         return [
             "workTime" : workTime,
             "restTime" : restTime,
-            "dateLog" : dateLog,
+            "dateLog" : dateLog
             // TODO: UID property
     ]}
 }
