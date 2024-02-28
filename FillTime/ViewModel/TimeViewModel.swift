@@ -6,3 +6,9 @@
 //
 
 import Foundation
+
+class TimeViewModel {
+    
+    private var timer: Timer?
+    
+}
