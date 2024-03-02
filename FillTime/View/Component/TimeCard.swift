@@ -8,15 +8,27 @@
 import SwiftUI
 
 struct TimeCard: View {
+    
+    var title: String
+    var description: String
+    
     var body: some View {
+        
         VStack {
-            Text("Go")
+            Text(title)
+                .font(.largeTitle)
+                .padding(.top, 10)
+            
+            Text(description)
+                .padding()
         }
-        .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, height: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/, alignment: /*@START_MENU_TOKEN@*/.center/*@END_MENU_TOKEN@*/)
-        .background(.red)
+        .frame(maxWidth: .infinity)
+        .background(.purple)
+        .clipShape(.rect(cornerRadius: 30))
+        .padding(.horizontal, 50)
     }
 }
 
 #Preview {
-    TimeCard()
+    TimeCard(title: SystemText.pomodoro.title, description: SystemText.pomodoro.description)
 }

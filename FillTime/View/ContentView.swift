@@ -13,7 +13,7 @@ struct ContentView: View {
     
     var body: some View {
         VStack {
-            Text(SystemText.pomodoro.description)
+            Text(SystemText.pomodoro.title)
             Text("\(viewModel.model.time1)")
             HStack {
                 Button(action: {
