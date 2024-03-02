@@ -14,6 +14,8 @@
 		5949F7B22AAE0DD600E58D5A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5949F7B12AAE0DD600E58D5A /* Preview Assets.xcassets */; };
 		5949F7C62AAE0DD600E58D5A /* FillTimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949F7C52AAE0DD600E58D5A /* FillTimeUITests.swift */; };
 		5949F7C82AAE0DD600E58D5A /* FillTimeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949F7C72AAE0DD600E58D5A /* FillTimeUITestsLaunchTests.swift */; };
+		C32D38142B92FFB500AE3A08 /* StaticData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D38132B92FFB500AE3A08 /* StaticData.swift */; };
+		C32D38162B9301EB00AE3A08 /* TimeCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D38152B9301EB00AE3A08 /* TimeCard.swift */; };
 		C39105F82B8EFE960020BD39 /* TimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39105F72B8EFE960020BD39 /* TimeViewModel.swift */; };
 		C39105FA2B8F1F2F0020BD39 /* TimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39105F92B8F1F2F0020BD39 /* TimeModel.swift */; };
 /* End PBXBuildFile section */
@@ -47,6 +49,8 @@
 		5949F7C52AAE0DD600E58D5A /* FillTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillTimeUITests.swift; sourceTree = "<group>"; };
 		5949F7C72AAE0DD600E58D5A /* FillTimeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillTimeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C32AAF532B514207005D38F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C32D38132B92FFB500AE3A08 /* StaticData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticData.swift; sourceTree = "<group>"; };
+		C32D38152B9301EB00AE3A08 /* TimeCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeCard.swift; sourceTree = "<group>"; };
 		C39105F72B8EFE960020BD39 /* TimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewModel.swift; sourceTree = "<group>"; };
 		C39105F92B8F1F2F0020BD39 /* TimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -98,6 +102,7 @@
 		5949F7A92AAE0DD300E58D5A /* FillTime */ = {
 			isa = PBXGroup;
 			children = (
+				C32D38122B92FFA000AE3A08 /* Content */,
 				C32AAF532B514207005D38F1 /* Info.plist */,
 				5949F7AA2AAE0DD300E58D5A /* FillTimeApp.swift */,
 				5949F7DC2AB07D8700E58D5A /* Model */,
@@ -147,6 +152,7 @@
 		59A488B42AE829DA00C7E812 /* Component */ = {
 			isa = PBXGroup;
 			children = (
+				C32D38152B9301EB00AE3A08 /* TimeCard.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -157,6 +163,14 @@
 				C39105F72B8EFE960020BD39 /* TimeViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		C32D38122B92FFA000AE3A08 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				C32D38132B92FFB500AE3A08 /* StaticData.swift */,
+			);
+			path = Content;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -290,7 +304,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C32D38142B92FFB500AE3A08 /* StaticData.swift in Sources */,
 				5949F7AD2AAE0DD300E58D5A /* ContentView.swift in Sources */,
+				C32D38162B9301EB00AE3A08 /* TimeCard.swift in Sources */,
 				C39105F82B8EFE960020BD39 /* TimeViewModel.swift in Sources */,
 				C39105FA2B8F1F2F0020BD39 /* TimeModel.swift in Sources */,
 				5949F7AB2AAE0DD300E58D5A /* FillTimeApp.swift in Sources */,

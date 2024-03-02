@@ -6,3 +6,11 @@
 //
 
 import Foundation
+
+struct TimeModel {
+    
+    var time1: Int
+    var time2: Int
+    var Data: Date
+    
+}

@@ -9,13 +9,30 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @ObservedObject var viewModel: TimeViewModel
+    
     var body: some View {
-        Text("Hello, World!")
+        VStack {
+            Text(SystemText.pomodoro.description)
+            Text("\(viewModel.model.time1)")
+            HStack {
+                Button(action: {
+                    viewModel.startTimer()
+                }, label: {
+                    Text("Start")
+                })
+                Button(action: {
+                    
+                }, label: {
+                    Text("Button")
+                })
+            }
+        }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(viewModel: TimeViewModel())
     }
 }
