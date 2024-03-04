@@ -10,5 +10,6 @@ import Foundation
 struct SystemModel: Identifiable {
     var contentTitle: String
     var contentDescription: String
+    // 반복문 활용을 위한 id
     var id = UUID()
 }

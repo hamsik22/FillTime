@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct TimeCard: View {
+struct TechniqueCard: View {
     
     var title: String
     var description: String
@@ -30,5 +30,5 @@ struct TimeCard: View {
 }
 
 #Preview {
-    TimeCard(title: SystemText.pomodoro.title, description: SystemText.pomodoro.description)
+    TechniqueCard(title: SystemText.pomodoro.title, description: SystemText.pomodoro.description)
 }
