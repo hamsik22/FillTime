@@ -9,30 +9,30 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @ObservedObject var viewModel: TimeViewModel
+    @ObservedObject var timeVM: TimeViewModel
+    @ObservedObject var systemVM: SystemViewModel
     
     var body: some View {
         VStack {
-            Text(SystemText.pomodoro.title)
-            Text("\(viewModel.model.time1)")
-            HStack {
-                Button(action: {
-                    viewModel.startTimer()
-                }, label: {
-                    Text("Start")
-                })
-                Button(action: {
-                    
-                }, label: {
-                    Text("Button")
-                })
+            NavigationLink {
+                Text("It's Empty!")
+            } label: {
+                TimeCard(title: systemVM.systemContentArray[0].contentTitle,
+                         description:systemVM.systemContentArray[0].contentDescription)
+                .tint(.black)
+            }
+            NavigationLink {
+                Text("It's Empty!")
+            } label: {
+                TimeCard(title: systemVM.systemContentArray[1].contentTitle, description: systemVM.systemContentArray[1].contentDescription)
+                    .tint(.black)
+            }
             }
         }
     }
-}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(viewModel: TimeViewModel())
+        ContentView(timeVM: TimeViewModel(), systemVM: SystemViewModel())
     }
 }
