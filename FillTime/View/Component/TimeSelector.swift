@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TimeSelector: View {
     
+    // TODO: 데이터구조 수정필요
     @State var selections: (Int, Int) = (0, 0)
     var hours: [Int] = Array(0...24)
     var minute: [Int] = Array(0...59)
