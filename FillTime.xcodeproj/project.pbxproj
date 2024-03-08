@@ -16,6 +16,8 @@
 		5949F7C82AAE0DD600E58D5A /* FillTimeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949F7C72AAE0DD600E58D5A /* FillTimeUITestsLaunchTests.swift */; };
 		C32D38142B92FFB500AE3A08 /* StaticData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D38132B92FFB500AE3A08 /* StaticData.swift */; };
 		C32D38162B9301EB00AE3A08 /* TechniqueCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D38152B9301EB00AE3A08 /* TechniqueCard.swift */; };
+		C3735C892B96F49A0083226C /* TimeGaugeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3735C882B96F49A0083226C /* TimeGaugeBar.swift */; };
+		C3735C8B2B9704240083226C /* TimeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3735C8A2B9704240083226C /* TimeText.swift */; };
 		C39105F82B8EFE960020BD39 /* TimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39105F72B8EFE960020BD39 /* TimeViewModel.swift */; };
 		C39105FA2B8F1F2F0020BD39 /* TimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39105F92B8F1F2F0020BD39 /* TimeModel.swift */; };
 		C3D345AE2B95B5EF001FC4AA /* SystemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D345AD2B95B5EF001FC4AA /* SystemViewModel.swift */; };
@@ -54,6 +56,8 @@
 		C32AAF532B514207005D38F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C32D38132B92FFB500AE3A08 /* StaticData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticData.swift; sourceTree = "<group>"; };
 		C32D38152B9301EB00AE3A08 /* TechniqueCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechniqueCard.swift; sourceTree = "<group>"; };
+		C3735C882B96F49A0083226C /* TimeGaugeBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeGaugeBar.swift; sourceTree = "<group>"; };
+		C3735C8A2B9704240083226C /* TimeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeText.swift; sourceTree = "<group>"; };
 		C39105F72B8EFE960020BD39 /* TimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewModel.swift; sourceTree = "<group>"; };
 		C39105F92B8F1F2F0020BD39 /* TimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeModel.swift; sourceTree = "<group>"; };
 		C3D345AD2B95B5EF001FC4AA /* SystemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemViewModel.swift; sourceTree = "<group>"; };
@@ -161,6 +165,8 @@
 			children = (
 				C32D38152B9301EB00AE3A08 /* TechniqueCard.swift */,
 				C3D345B12B95CD55001FC4AA /* TimeSelector.swift */,
+				C3735C882B96F49A0083226C /* TimeGaugeBar.swift */,
+				C3735C8A2B9704240083226C /* TimeText.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -314,6 +320,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C32D38142B92FFB500AE3A08 /* StaticData.swift in Sources */,
+				C3735C8B2B9704240083226C /* TimeText.swift in Sources */,
 				C3D345B22B95CD55001FC4AA /* TimeSelector.swift in Sources */,
 				5949F7AD2AAE0DD300E58D5A /* ContentView.swift in Sources */,
 				C3D345B02B95B617001FC4AA /* SystemModel.swift in Sources */,
@@ -321,6 +328,7 @@
 				C3D345AE2B95B5EF001FC4AA /* SystemViewModel.swift in Sources */,
 				C39105F82B8EFE960020BD39 /* TimeViewModel.swift in Sources */,
 				C39105FA2B8F1F2F0020BD39 /* TimeModel.swift in Sources */,
+				C3735C892B96F49A0083226C /* TimeGaugeBar.swift in Sources */,
 				5949F7AB2AAE0DD300E58D5A /* FillTimeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
