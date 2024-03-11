@@ -8,12 +8,15 @@
 import SwiftUI
 
 struct TimeText: View {
+    
+    @Binding var data: Int
+    
     var body: some View {
-        Text("Hello, World!")
+        Text("\(data)")
             .font(.largeTitle)
     }
 }
 
 #Preview {
-    TimeText()
+    TimeText(data: .constant(100))
 }

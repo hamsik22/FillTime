@@ -26,7 +26,7 @@ struct TimeGaugeBar: View {
                 .stroke(style: StrokeStyle(lineWidth: 20.0, lineCap: .round, lineJoin: .round))
                 .foregroundColor(Color.green.opacity(0.8))
                 .rotationEffect(Angle(degrees: 270.0))
-        }.padding()
+        }.padding(30)
     }
 }
 

@@ -14,7 +14,7 @@ struct FillTimeApp: App {
         
         WindowGroup {
             NavigationStack {
-                ContentView(timeVM: TimeViewModel(), systemVM: SystemViewModel())
+                ContentView(timeVM: TimeViewModel())
             }
         }
     }

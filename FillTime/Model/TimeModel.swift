@@ -9,8 +9,8 @@ import Foundation
 
 struct TimeModel {
     
-    var time1: Int
-    var time2: Int
-    var Data: Date
+    var workTime: Int = 1
+    var restTime: Int = 0
+    var cycle: Int = 0
     
 }

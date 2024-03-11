@@ -28,3 +28,17 @@ enum SystemText {
         }
     }
 }
+
+enum SystemData {
+    case pomodoro
+    case timeBoxing
+    
+    var timeRange: [Int] {
+        switch self {
+        case .pomodoro :
+            return Array(stride(from: 5, to: 60, by: 5))
+        case .timeBoxing :
+            return []
+        }
+    }
+}
