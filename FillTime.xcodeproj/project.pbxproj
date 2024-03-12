@@ -19,6 +19,7 @@
 		C336C61F2B9B0FCD001AFFA1 /* PomodoroSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C336C61E2B9B0FCD001AFFA1 /* PomodoroSettingView.swift */; };
 		C3735C892B96F49A0083226C /* TimeGaugeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3735C882B96F49A0083226C /* TimeGaugeBar.swift */; };
 		C3735C8B2B9704240083226C /* TimeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3735C8A2B9704240083226C /* TimeText.swift */; };
+		C3854E592BA074D000E744DB /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3854E582BA074D000E744DB /* TimerView.swift */; };
 		C39105F82B8EFE960020BD39 /* TimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39105F72B8EFE960020BD39 /* TimeViewModel.swift */; };
 		C39105FA2B8F1F2F0020BD39 /* TimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39105F92B8F1F2F0020BD39 /* TimeModel.swift */; };
 		C3C722342B9EFA2700E4A7BB /* StandardTextBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C722332B9EFA2700E4A7BB /* StandardTextBar.swift */; };
@@ -61,6 +62,7 @@
 		C336C61E2B9B0FCD001AFFA1 /* PomodoroSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroSettingView.swift; sourceTree = "<group>"; };
 		C3735C882B96F49A0083226C /* TimeGaugeBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeGaugeBar.swift; sourceTree = "<group>"; };
 		C3735C8A2B9704240083226C /* TimeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeText.swift; sourceTree = "<group>"; };
+		C3854E582BA074D000E744DB /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		C39105F72B8EFE960020BD39 /* TimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewModel.swift; sourceTree = "<group>"; };
 		C39105F92B8F1F2F0020BD39 /* TimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeModel.swift; sourceTree = "<group>"; };
 		C3C722332B9EFA2700E4A7BB /* StandardTextBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardTextBar.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			children = (
 				5949F7AC2AAE0DD300E58D5A /* ContentView.swift */,
 				C336C61E2B9B0FCD001AFFA1 /* PomodoroSettingView.swift */,
+				C3854E582BA074D000E744DB /* TimerView.swift */,
 				59A488B42AE829DA00C7E812 /* Component */,
 			);
 			path = View;
@@ -325,6 +328,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C3854E592BA074D000E744DB /* TimerView.swift in Sources */,
 				C32D38142B92FFB500AE3A08 /* StaticData.swift in Sources */,
 				C3735C8B2B9704240083226C /* TimeText.swift in Sources */,
 				C3D345B22B95CD55001FC4AA /* TimerSetting.swift in Sources */,

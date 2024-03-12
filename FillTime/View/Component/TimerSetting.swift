@@ -23,7 +23,8 @@ struct TimerSetting: View {
             HStack {
                 Picker("Picker", selection: $selection) {
                     ForEach(arrayRange, id: \.self) { item in
-                        Text("\(item)")                            .tag(item)
+                        Text("\(item)")
+                            .tag(item)
                             .font(.title)
                     }
                 }
