@@ -8,11 +8,28 @@
 import SwiftUI
 
 struct TimerView: View {
+    
+    @Binding var progress: Float
+    @Binding var timeData: Int
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            ZStack {
+            TimeGaugeBar(progress: $progress)
+            TimeText(timeData: $timeData)
+            }
+            HStack {
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    StandardTextBar(input: "버튼 1")
+                })
+                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+                    StandardTextBar(input: "버튼 2")
+                })
+            }
+        }
     }
 }
 
 #Preview {
-    TimerView()
+    TimerView(progress: .constant(0.4), timeData: .constant(300))
 }
