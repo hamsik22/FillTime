@@ -20,6 +20,9 @@
 		C3735C892B96F49A0083226C /* TimeGaugeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3735C882B96F49A0083226C /* TimeGaugeBar.swift */; };
 		C3735C8B2B9704240083226C /* TimeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3735C8A2B9704240083226C /* TimeText.swift */; };
 		C3854E592BA074D000E744DB /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3854E582BA074D000E744DB /* TimerView.swift */; };
+		C386B9F22BA5E0BC005812D0 /* TimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39105F72B8EFE960020BD39 /* TimeViewModel.swift */; };
+		C386B9F32BA5E0C2005812D0 /* TimeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3735C8A2B9704240083226C /* TimeText.swift */; };
+		C386B9F42BA5E0C8005812D0 /* TimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39105F92B8F1F2F0020BD39 /* TimeModel.swift */; };
 		C39105F82B8EFE960020BD39 /* TimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39105F72B8EFE960020BD39 /* TimeViewModel.swift */; };
 		C39105FA2B8F1F2F0020BD39 /* TimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39105F92B8F1F2F0020BD39 /* TimeModel.swift */; };
 		C3C722342B9EFA2700E4A7BB /* StandardTextBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C722332B9EFA2700E4A7BB /* StandardTextBar.swift */; };
@@ -357,7 +360,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				5949F7C82AAE0DD600E58D5A /* FillTimeUITestsLaunchTests.swift in Sources */,
+				C386B9F32BA5E0C2005812D0 /* TimeText.swift in Sources */,
+				C386B9F22BA5E0BC005812D0 /* TimeViewModel.swift in Sources */,
 				5949F7C62AAE0DD600E58D5A /* FillTimeUITests.swift in Sources */,
+				C386B9F42BA5E0C8005812D0 /* TimeModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

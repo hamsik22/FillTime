@@ -9,14 +9,14 @@ import SwiftUI
 
 struct TimeText: View {
     
-    @Binding var timeData: Int
+    @Binding var timeData: String
     
     var body: some View {
-        Text("\(timeData)")
+        Text(timeData)
             .font(.largeTitle)
     }
 }
 
 #Preview {
-    TimeText(timeData: .constant(100))
+    TimeText(timeData: .constant("100"))
 }

@@ -10,13 +10,13 @@ import SwiftUI
 struct TimerView: View {
     
     @Binding var progress: Float
-    @Binding var timeData: Int
+    @ObservedObject var timeVM: TimeViewModel
     
     var body: some View {
         VStack {
             ZStack {
             TimeGaugeBar(progress: $progress)
-            TimeText(timeData: $timeData)
+                TimeText(timeData: $timeVM.timeTextString)
             }
             HStack {
                 Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
@@ -31,5 +31,5 @@ struct TimerView: View {
 }
 
 #Preview {
-    TimerView(progress: .constant(0.4), timeData: .constant(300))
+    TimerView(progress: .constant(0.4), timeVM: TimeViewModel())
 }
