@@ -10,7 +10,6 @@ import Foundation
 class TimeViewModel: ObservableObject {
     
     private var timer: Timer?
-    var model = TimeModel()
     @Published var timePercent: Float = 0.3
     @Published var timeTextString = "xx:xx:xx"
     @Published var workTime = 250
