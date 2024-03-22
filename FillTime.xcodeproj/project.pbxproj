@@ -18,10 +18,8 @@
 		C32D38162B9301EB00AE3A08 /* TechniqueCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D38152B9301EB00AE3A08 /* TechniqueCard.swift */; };
 		C336C61F2B9B0FCD001AFFA1 /* PomodoroSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C336C61E2B9B0FCD001AFFA1 /* PomodoroSettingView.swift */; };
 		C3735C892B96F49A0083226C /* TimeGaugeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3735C882B96F49A0083226C /* TimeGaugeBar.swift */; };
-		C3735C8B2B9704240083226C /* TimeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3735C8A2B9704240083226C /* TimeText.swift */; };
 		C3854E592BA074D000E744DB /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3854E582BA074D000E744DB /* TimerView.swift */; };
 		C386B9F22BA5E0BC005812D0 /* TimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39105F72B8EFE960020BD39 /* TimeViewModel.swift */; };
-		C386B9F32BA5E0C2005812D0 /* TimeText.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3735C8A2B9704240083226C /* TimeText.swift */; };
 		C39105F82B8EFE960020BD39 /* TimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39105F72B8EFE960020BD39 /* TimeViewModel.swift */; };
 		C3C722342B9EFA2700E4A7BB /* StandardTextBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C722332B9EFA2700E4A7BB /* StandardTextBar.swift */; };
 		C3D345AE2B95B5EF001FC4AA /* SystemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D345AD2B95B5EF001FC4AA /* SystemViewModel.swift */; };
@@ -61,7 +59,6 @@
 		C32D38152B9301EB00AE3A08 /* TechniqueCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechniqueCard.swift; sourceTree = "<group>"; };
 		C336C61E2B9B0FCD001AFFA1 /* PomodoroSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroSettingView.swift; sourceTree = "<group>"; };
 		C3735C882B96F49A0083226C /* TimeGaugeBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeGaugeBar.swift; sourceTree = "<group>"; };
-		C3735C8A2B9704240083226C /* TimeText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeText.swift; sourceTree = "<group>"; };
 		C3854E582BA074D000E744DB /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		C39105F72B8EFE960020BD39 /* TimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewModel.swift; sourceTree = "<group>"; };
 		C3C722332B9EFA2700E4A7BB /* StandardTextBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardTextBar.swift; sourceTree = "<group>"; };
@@ -170,7 +167,6 @@
 				C32D38152B9301EB00AE3A08 /* TechniqueCard.swift */,
 				C3D345B12B95CD55001FC4AA /* TimerSetting.swift */,
 				C3735C882B96F49A0083226C /* TimeGaugeBar.swift */,
-				C3735C8A2B9704240083226C /* TimeText.swift */,
 				C3C722332B9EFA2700E4A7BB /* StandardTextBar.swift */,
 			);
 			path = Component;
@@ -326,7 +322,6 @@
 			files = (
 				C3854E592BA074D000E744DB /* TimerView.swift in Sources */,
 				C32D38142B92FFB500AE3A08 /* StaticData.swift in Sources */,
-				C3735C8B2B9704240083226C /* TimeText.swift in Sources */,
 				C3D345B22B95CD55001FC4AA /* TimerSetting.swift in Sources */,
 				5949F7AD2AAE0DD300E58D5A /* ContentView.swift in Sources */,
 				C3C722342B9EFA2700E4A7BB /* StandardTextBar.swift in Sources */,
@@ -351,7 +346,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5949F7C82AAE0DD600E58D5A /* FillTimeUITestsLaunchTests.swift in Sources */,
-				C386B9F32BA5E0C2005812D0 /* TimeText.swift in Sources */,
 				C386B9F22BA5E0BC005812D0 /* TimeViewModel.swift in Sources */,
 				5949F7C62AAE0DD600E58D5A /* FillTimeUITests.swift in Sources */,
 			);

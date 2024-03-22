@@ -11,7 +11,7 @@ class TimeViewModel: ObservableObject {
     
     private var timer: Timer?
     @Published var timePercent: Float = 0.3
-    @Published var timeTextString = "xx:xx:xx"
+    @Published var timeTextString = "00:00:00"
     @Published var workTime = 250
     @Published var restTime = 0
     @Published var cycle = 0
