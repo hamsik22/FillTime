@@ -14,10 +14,10 @@ struct PomodoroSettingView: View {
     var body: some View {
         VStack {
             HStack {
-                TimerSetting(title: "집중", arrayRange: SystemData.pomodoro.timeRange, selection: $timeVM.model.workTime)
-                TimerSetting(title: "휴식", arrayRange: SystemData.pomodoro.timeRange, selection: $timeVM.model.cycle)
+                TimerSetting(title: "집중", arrayRange: SystemData.pomodoro.timeRange, selection: $timeVM.workTime)
+                TimerSetting(title: "휴식", arrayRange: SystemData.pomodoro.timeRange, selection: $timeVM.cycle)
             }
-            TimerSetting(title: "반복", arrayRange: SystemData.pomodoro.timeRange, selection: $timeVM.model.cycle)
+            TimerSetting(title: "반복", arrayRange: SystemData.pomodoro.timeRange, selection: $timeVM.cycle)
             HStack {
                 Button(action: {
                 }, label: {

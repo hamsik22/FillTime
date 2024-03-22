@@ -10,28 +10,38 @@ import Foundation
 class TimeViewModel: ObservableObject {
     
     private var timer: Timer?
-    @Published var model = TimeModel()
+    var model = TimeModel()
     @Published var timePercent: Float = 0.3
-    @Published var timeTextString = ""
+    @Published var timeTextString = "xx:xx:xx"
+    @Published var workTime = 250
+    @Published var restTime = 0
+    @Published var cycle = 0
     
     func startTimer(time: Int) -> Int {
         var time = time
         // TODO: 시간이 0보다 낮아질 수 없게 제한점을 생성하고, 0이 되면 0이 되었음을 알리는 함수를 만들자.
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { Timer in 
-            time -= 1
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { Timer in
+            print("time is \(time)")
             self.timeTextString = self.getTimeText(time: time)
+            print(self.timeTextString)
+            time -= 1
         })
         return time
     }
     
     func startWorkTime() {
-        self.model.workTime = startTimer(time: self.model.workTime)
-        self.timeTextString = getTimeText(time: self.model.workTime)
+        print("work timer started")
+        self.workTime = startTimer(time: self.workTime)
     }
     
     func startRestTime() {
-        self.model.restTime = startTimer(time: self.model.restTime)
-        self.timeTextString = getTimeText(time: self.model.restTime)
+        self.restTime = startTimer(time: self.restTime)
+        self.timeTextString = getTimeText(time: self.restTime)
+    }
+    
+    func stopTimer() {
+        print("timer stopped")
+        self.timer?.invalidate()
     }
     
     // TODO: getTimeElapsedPercent() 함수 정의
@@ -40,10 +50,11 @@ class TimeViewModel: ObservableObject {
     }
     
     func getTimeText(time: Int) -> String {
-        let hour = time / 3600
-        let minute = (time % 3600) / 60
-        let second = time % 60
+    
+        let hours = String(format: "%02d:", time / 3600)
+        let minutes = String(format: "%02d:", (time % 3600) / 60)
+        let seconds = String(format: "%02d", time % 60)
         
-        return String(format: "%02d:%02dL%02d", hour, minute, second)
+        return hours + minutes + seconds
     }
 }

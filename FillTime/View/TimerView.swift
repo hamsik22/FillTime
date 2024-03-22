@@ -15,15 +15,21 @@ struct TimerView: View {
     var body: some View {
         VStack {
             ZStack {
-            TimeGaugeBar(progress: $progress)
-                TimeText(timeData: $timeVM.timeTextString)
+                TimeGaugeBar(progress: $progress)
+                Text(timeVM.timeTextString)
+                    .font(.system(size: 50))
+                    .bold()
             }
             HStack {
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                    StandardTextBar(input: "버튼 1")
+                Button(action: {
+                    timeVM.startWorkTime()
+                }, label: {
+                    StandardTextBar(input: "시작")
                 })
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                    StandardTextBar(input: "버튼 2")
+                Button(action: {
+                    timeVM.stopTimer()
+                }, label: {
+                    StandardTextBar(input: "종료")
                 })
             }
         }
