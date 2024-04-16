@@ -16,6 +16,12 @@ class TimeViewModel: ObservableObject {
     @Published var restTime = 0
     @Published var cycle = 0
     
+    // TODO: 입력값 받기
+    // TODO: 타이머 실행
+    // TODO: 타이머 중지
+    // TODO: 타이머 리셋
+    // TODO: 입력값 할당 및 대입
+    
     func startTimer(time: Int) -> Int {
         var time = time
         // TODO: 시간이 0보다 낮아질 수 없게 제한점을 생성하고, 0이 되면 0이 되었음을 알리는 함수를 만들자.
