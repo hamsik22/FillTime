@@ -18,6 +18,7 @@
 		C32D38162B9301EB00AE3A08 /* TechniqueCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D38152B9301EB00AE3A08 /* TechniqueCard.swift */; };
 		C336C61F2B9B0FCD001AFFA1 /* PomodoroSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C336C61E2B9B0FCD001AFFA1 /* PomodoroSettingView.swift */; };
 		C33AC15F2BCE5C3A000A8798 /* MockTimeSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C33AC15E2BCE5C3A000A8798 /* MockTimeSettingView.swift */; };
+		C34631872BCE6F8A0075A880 /* TestTimeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34631862BCE6F8A0075A880 /* TestTimeClass.swift */; };
 		C3735C892B96F49A0083226C /* TimeGaugeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3735C882B96F49A0083226C /* TimeGaugeBar.swift */; };
 		C3854E592BA074D000E744DB /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3854E582BA074D000E744DB /* TimerView.swift */; };
 		C386B9F22BA5E0BC005812D0 /* TimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39105F72B8EFE960020BD39 /* TimeViewModel.swift */; };
@@ -60,6 +61,7 @@
 		C32D38152B9301EB00AE3A08 /* TechniqueCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechniqueCard.swift; sourceTree = "<group>"; };
 		C336C61E2B9B0FCD001AFFA1 /* PomodoroSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroSettingView.swift; sourceTree = "<group>"; };
 		C33AC15E2BCE5C3A000A8798 /* MockTimeSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockTimeSettingView.swift; sourceTree = "<group>"; };
+		C34631862BCE6F8A0075A880 /* TestTimeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTimeClass.swift; sourceTree = "<group>"; };
 		C3735C882B96F49A0083226C /* TimeGaugeBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeGaugeBar.swift; sourceTree = "<group>"; };
 		C3854E582BA074D000E744DB /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		C39105F72B8EFE960020BD39 /* TimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewModel.swift; sourceTree = "<group>"; };
@@ -97,7 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				5949F7A92AAE0DD300E58D5A /* FillTime */,
-				5949F7C42AAE0DD600E58D5A /* FillTimeUITests */,
+				5949F7C42AAE0DD600E58D5A /* FillTimeTests */,
 				5949F7A82AAE0DD300E58D5A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -136,13 +138,14 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		5949F7C42AAE0DD600E58D5A /* FillTimeUITests */ = {
+		5949F7C42AAE0DD600E58D5A /* FillTimeTests */ = {
 			isa = PBXGroup;
 			children = (
 				5949F7C52AAE0DD600E58D5A /* FillTimeUITests.swift */,
 				5949F7C72AAE0DD600E58D5A /* FillTimeUITestsLaunchTests.swift */,
+				C34631862BCE6F8A0075A880 /* TestTimeClass.swift */,
 			);
-			path = FillTimeUITests;
+			path = FillTimeTests;
 			sourceTree = "<group>";
 		};
 		5949F7D62AAF138D00E58D5A /* View */ = {
@@ -263,6 +266,7 @@
 					};
 					5949F7B62AAE0DD600E58D5A = {
 						CreatedOnToolsVersion = 14.3;
+						LastSwiftMigration = 1530;
 						TestTargetID = 5949F7A62AAE0DD300E58D5A;
 					};
 					5949F7C02AAE0DD600E58D5A = {
@@ -342,6 +346,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C34631872BCE6F8A0075A880 /* TestTimeClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,6 +575,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UF3R52LYV7;
@@ -579,6 +585,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.payback9488.FillTimeTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FillTime.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FillTime";
@@ -590,6 +597,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UF3R52LYV7;

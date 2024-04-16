@@ -33,4 +33,12 @@ struct MockTimeSettingView: View {
 class MockClass: ObservableObject {
     @Published var hourData = 0
     @Published var minuteData = 59
+    private var timer = Timer()
+    
+    // 입력 수만큼 동작하는 시간 함수
+    func mockStartTimerfor5Seconds() {
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { Timer in
+            
+        })
+    }
 }
