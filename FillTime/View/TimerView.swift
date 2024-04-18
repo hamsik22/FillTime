@@ -31,7 +31,7 @@ struct TimerView: View {
                     StandardTextBar(input: "시작")
                 })
                 Button(action: {
-                    // TODO: 타이머 리셋
+                    timeVM.resetTimer()
                 }, label: {
                     StandardTextBar(input: "종료")
                 })

@@ -8,9 +8,8 @@
 import SwiftUI
 
 
-struct TimerSetting: View {
+struct TimeSetting: View {
     
-    // TODO: 데이터구조 수정필요
     var title: String
     var arrayRange: [Int]
     @Binding var selection: Int
@@ -37,5 +36,5 @@ struct TimerSetting: View {
 }
 
 #Preview {
-    TimerSetting(title: "Title", arrayRange: Array(1...5), selection: .constant(5))
+    TimeSetting(title: "Title", arrayRange: Array(1...5), selection: .constant(5))
 }

@@ -15,7 +15,7 @@ class TimeViewModel: ObservableObject {
     @Published var timePercent: Float = 0.3
     @Published var timeText = "00:00:00"
     var workTime = 5
-    var restTime = 3
+    var restTime = 5
     var cycle = 0
     
     // TODO: 입력값 받기
@@ -35,6 +35,14 @@ class TimeViewModel: ObservableObject {
         })
     }
     // TODO: 타이머 리셋
+    func resetTimer() {
+        self.timer?.invalidate()
+        self.workTime = 0
+        self.restTime = 0
+        self.cycle = 0
+        self.timeText = getTimeText(time: 0)
+        print("Timer has Reset!")
+    }
     // TODO: 입력값 할당 및 대입
     
     // TODO: getTimeElapsedPercent() 함수 정의

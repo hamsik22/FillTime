@@ -24,7 +24,7 @@
 		C39105F82B8EFE960020BD39 /* TimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39105F72B8EFE960020BD39 /* TimeViewModel.swift */; };
 		C3C722342B9EFA2700E4A7BB /* StandardTextBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C722332B9EFA2700E4A7BB /* StandardTextBar.swift */; };
 		C3D345AE2B95B5EF001FC4AA /* SystemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D345AD2B95B5EF001FC4AA /* SystemViewModel.swift */; };
-		C3D345B22B95CD55001FC4AA /* TimerSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D345B12B95CD55001FC4AA /* TimerSetting.swift */; };
+		C3D345B22B95CD55001FC4AA /* TimeSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D345B12B95CD55001FC4AA /* TimeSetting.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +65,7 @@
 		C39105F72B8EFE960020BD39 /* TimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewModel.swift; sourceTree = "<group>"; };
 		C3C722332B9EFA2700E4A7BB /* StandardTextBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardTextBar.swift; sourceTree = "<group>"; };
 		C3D345AD2B95B5EF001FC4AA /* SystemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemViewModel.swift; sourceTree = "<group>"; };
-		C3D345B12B95CD55001FC4AA /* TimerSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerSetting.swift; sourceTree = "<group>"; };
+		C3D345B12B95CD55001FC4AA /* TimeSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSetting.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,7 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				C32D38152B9301EB00AE3A08 /* TechniqueCard.swift */,
-				C3D345B12B95CD55001FC4AA /* TimerSetting.swift */,
+				C3D345B12B95CD55001FC4AA /* TimeSetting.swift */,
 				C3735C882B96F49A0083226C /* TimeGaugeBar.swift */,
 				C3C722332B9EFA2700E4A7BB /* StandardTextBar.swift */,
 			);
@@ -326,7 +326,7 @@
 			files = (
 				C3854E592BA074D000E744DB /* TimerView.swift in Sources */,
 				C32D38142B92FFB500AE3A08 /* StaticData.swift in Sources */,
-				C3D345B22B95CD55001FC4AA /* TimerSetting.swift in Sources */,
+				C3D345B22B95CD55001FC4AA /* TimeSetting.swift in Sources */,
 				5949F7AD2AAE0DD300E58D5A /* ContentView.swift in Sources */,
 				C3C722342B9EFA2700E4A7BB /* StandardTextBar.swift in Sources */,
 				C32D38162B9301EB00AE3A08 /* TechniqueCard.swift in Sources */,
