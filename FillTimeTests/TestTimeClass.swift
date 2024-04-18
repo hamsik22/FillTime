@@ -39,6 +39,16 @@ final class TestTimeClass: XCTestCase {
             }
         }
     }
+    
+    func testGetAfter1MinuteDate() throws {
+        var currentDate = Date.now
+        var secondData = 60.0
+        var afterDate: Date?
+        
+        afterDate = currentDate.addingTimeInterval(secondData)
+        print(currentDate)
+        print(afterDate!)
+    }
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
