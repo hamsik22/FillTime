@@ -16,18 +16,19 @@ struct TimerView: View {
         VStack {
             ZStack {
                 TimeGaugeBar(progress: $progress)
-                Text(timeVM.timeTextString)
+                Text(timeVM.timeText)
                     .font(.system(size: 50))
                     .bold()
             }
             HStack {
                 Button(action: {
-                    timeVM.startWorkTime()
+                    // TODO: 타이머 시작
+                    timeVM.startTimer(for: 30)
                 }, label: {
                     StandardTextBar(input: "시작")
                 })
                 Button(action: {
-                    timeVM.stopTimer()
+                    // TODO: 타이머 리셋
                 }, label: {
                     StandardTextBar(input: "종료")
                 })

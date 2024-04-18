@@ -11,10 +11,10 @@ class TimeViewModel: ObservableObject {
     
     private var timer: Timer?
     @Published var timePercent: Float = 0.3
-    @Published var timeTextString = "00:00:00"
-    @Published var workTime = 250
-    @Published var restTime = 0
-    @Published var cycle = 0
+    @Published var timeText = "00:00:00"
+    var workTime = 250
+    var restTime = 0
+    var cycle = 0
     
     // TODO: 입력값 받기
     // MARK: 입력된 값만큼 타이머를 진행하고, 입력 값이 0이 되면 타이머를 종료
@@ -27,6 +27,7 @@ class TimeViewModel: ObservableObject {
                 print("Timer has Ended")
             }
             timeLeft -= 1
+            self.timeText = self.getTimeText(time: timeLeft)
             print(timeLeft)
         })
     }
@@ -42,9 +43,9 @@ class TimeViewModel: ObservableObject {
     // TODO: hours가 0이면 $02d:%02d 로 출력
     func getTimeText(time: Int) -> String {
     
-        let hours = String(format: "%02d:", time / 3600)
-        let minutes = String(format: "%02d:", (time % 3600) / 60)
-        let seconds = String(format: "%02d", time % 60)
+        let hours = time / 3600
+        let minutes = (time % 3600) / 60
+        let seconds = time % 60
         
         return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
     }
