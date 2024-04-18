@@ -17,49 +17,35 @@ class TimeViewModel: ObservableObject {
     @Published var cycle = 0
     
     // TODO: 입력값 받기
-    // TODO: 타이머 실행
+    // MARK: 입력된 값만큼 타이머를 진행하고, 입력 값이 0이 되면 타이머를 종료
+    func startTimer(for time: Int) {
+        var timeLeft = time
+        
+        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { Timer in
+            if timeLeft == 0 {
+                self.timer?.invalidate()
+                print("Timer has Ended")
+            }
+            timeLeft -= 1
+            print(timeLeft)
+        })
+    }
     // TODO: 타이머 중지
     // TODO: 타이머 리셋
     // TODO: 입력값 할당 및 대입
-    
-    func startTimer(time: Int) -> Int {
-        var time = time
-        // TODO: 시간이 0보다 낮아질 수 없게 제한점을 생성하고, 0이 되면 0이 되었음을 알리는 함수를 만들자.
-        timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { Timer in
-            print("time is \(time)")
-            self.timeTextString = self.getTimeText(time: time)
-            print(self.timeTextString)
-            time -= 1
-        })
-        return time
-    }
-    
-    func startWorkTime() {
-        print("work timer started")
-        self.workTime = startTimer(time: self.workTime)
-    }
-    
-    func startRestTime() {
-        self.restTime = startTimer(time: self.restTime)
-        self.timeTextString = getTimeText(time: self.restTime)
-    }
-    
-    func stopTimer() {
-        print("timer stopped")
-        self.timer?.invalidate()
-    }
     
     // TODO: getTimeElapsedPercent() 함수 정의
     func getTimeElapsedPercent() -> Float {
         return 0.8
     }
     
+    // TODO: hours가 0이면 $02d:%02d 로 출력
     func getTimeText(time: Int) -> String {
     
         let hours = String(format: "%02d:", time / 3600)
         let minutes = String(format: "%02d:", (time % 3600) / 60)
         let seconds = String(format: "%02d", time % 60)
         
-        return hours + minutes + seconds
+        return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
     }
 }
