@@ -13,7 +13,7 @@ struct TimerSetting: View {
     // TODO: 데이터구조 수정필요
     var title: String
     var arrayRange: [Int]
-    @Binding var selection: Int
+    @State var selection: Int
     
     
     var body: some View {
@@ -33,13 +33,10 @@ struct TimerSetting: View {
             .frame(height: 100)
             .padding(.horizontal, 10)
             Text("선택 : \(selection)")
-        }
-        .padding()
-        .background(.green.opacity(0.2))
-        .clipShape(.rect(cornerRadius: 30))
+        }.padding()
     }
 }
 
 #Preview {
-    TimerSetting(title: "Title", arrayRange: Array(1...5), selection: .constant(5))
+    TimerSetting(title: "Title", arrayRange: Array(1...5), selection: 5)
 }
