@@ -36,7 +36,12 @@ struct TimerView: View {
                     StandardTextBar(input: "종료")
                 })
             }
-        }
+            .onAppear(perform: {
+                timeVM.timeText = timeVM.getTimeText(time: timeVM.workTime)
+            })
+        }.onDisappear(perform: {
+            timeVM.resetTimer()
+        })
     }
 }
 

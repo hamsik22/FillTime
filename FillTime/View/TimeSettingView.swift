@@ -7,16 +7,16 @@
 
 import SwiftUI
 
-struct PomodoroSettingView: View {
+struct TimeSettingView: View {
     
     @ObservedObject var timeVM: TimeViewModel
     
     var body: some View {
         VStack {
             HStack {
-                TimerSetting(title: "집중", arrayRange: SystemData.pomodoro.timeRange, selection: $timeVM.workTime)
-                TimerSetting(title: "휴식", arrayRange: SystemData.pomodoro.timeRange, selection: $timeVM.restTime)
-                TimerSetting(title: "반복", arrayRange: SystemData.pomodoro.timeRange, selection: $timeVM.cycle)
+                TimePicker(title: "집중", arrayRange: SystemData.pomodoro.timeRange, selection: $timeVM.workTime)
+                TimePicker(title: "휴식", arrayRange: SystemData.pomodoro.timeRange, selection: $timeVM.restTime)
+                TimePicker(title: "반복", arrayRange: SystemData.pomodoro.timeRange, selection: $timeVM.cycle)
             }
             HStack {
                 Button(action: {
@@ -37,5 +37,5 @@ struct PomodoroSettingView: View {
 }
 
 #Preview {
-    PomodoroSettingView(timeVM: TimeViewModel())
+    TimeSettingView(timeVM: TimeViewModel())
 }

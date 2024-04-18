@@ -14,8 +14,8 @@ class TimeViewModel: ObservableObject {
     @Published var taskState = true
     @Published var timePercent: Float = 0.3
     @Published var timeText = "00:00:00"
-    var workTime = 5
-    var restTime = 5
+    var workTime = 0
+    var restTime = 0
     var cycle = 0
     
     // TODO: 입력값 받기

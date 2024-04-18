@@ -8,7 +8,7 @@
 import SwiftUI
 
 
-struct TimeSetting: View {
+struct TimePicker: View {
     
     var title: String
     var arrayRange: [Int]
@@ -32,9 +32,12 @@ struct TimeSetting: View {
             .frame(height: 100)
             .padding(.horizontal, 10)
         }.padding()
+            .onAppear(perform: {
+                selection = arrayRange.first ?? 0
+            })
     }
 }
 
 #Preview {
-    TimeSetting(title: "Title", arrayRange: Array(1...5), selection: .constant(5))
+    TimePicker(title: "Title", arrayRange: Array(1...5), selection: .constant(5))
 }

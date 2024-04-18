@@ -16,7 +16,7 @@
 		5949F7C82AAE0DD600E58D5A /* FillTimeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949F7C72AAE0DD600E58D5A /* FillTimeUITestsLaunchTests.swift */; };
 		C32D38142B92FFB500AE3A08 /* StaticData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D38132B92FFB500AE3A08 /* StaticData.swift */; };
 		C32D38162B9301EB00AE3A08 /* TechniqueCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D38152B9301EB00AE3A08 /* TechniqueCard.swift */; };
-		C336C61F2B9B0FCD001AFFA1 /* PomodoroSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C336C61E2B9B0FCD001AFFA1 /* PomodoroSettingView.swift */; };
+		C336C61F2B9B0FCD001AFFA1 /* TimeSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C336C61E2B9B0FCD001AFFA1 /* TimeSettingView.swift */; };
 		C34631872BCE6F8A0075A880 /* TestTimeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34631862BCE6F8A0075A880 /* TestTimeClass.swift */; };
 		C3735C892B96F49A0083226C /* TimeGaugeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3735C882B96F49A0083226C /* TimeGaugeBar.swift */; };
 		C3854E592BA074D000E744DB /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3854E582BA074D000E744DB /* TimerView.swift */; };
@@ -24,7 +24,7 @@
 		C39105F82B8EFE960020BD39 /* TimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39105F72B8EFE960020BD39 /* TimeViewModel.swift */; };
 		C3C722342B9EFA2700E4A7BB /* StandardTextBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C722332B9EFA2700E4A7BB /* StandardTextBar.swift */; };
 		C3D345AE2B95B5EF001FC4AA /* SystemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D345AD2B95B5EF001FC4AA /* SystemViewModel.swift */; };
-		C3D345B22B95CD55001FC4AA /* TimeSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D345B12B95CD55001FC4AA /* TimeSetting.swift */; };
+		C3D345B22B95CD55001FC4AA /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D345B12B95CD55001FC4AA /* TimePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,14 +58,14 @@
 		C32AAF532B514207005D38F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C32D38132B92FFB500AE3A08 /* StaticData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticData.swift; sourceTree = "<group>"; };
 		C32D38152B9301EB00AE3A08 /* TechniqueCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechniqueCard.swift; sourceTree = "<group>"; };
-		C336C61E2B9B0FCD001AFFA1 /* PomodoroSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroSettingView.swift; sourceTree = "<group>"; };
+		C336C61E2B9B0FCD001AFFA1 /* TimeSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSettingView.swift; sourceTree = "<group>"; };
 		C34631862BCE6F8A0075A880 /* TestTimeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTimeClass.swift; sourceTree = "<group>"; };
 		C3735C882B96F49A0083226C /* TimeGaugeBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeGaugeBar.swift; sourceTree = "<group>"; };
 		C3854E582BA074D000E744DB /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		C39105F72B8EFE960020BD39 /* TimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewModel.swift; sourceTree = "<group>"; };
 		C3C722332B9EFA2700E4A7BB /* StandardTextBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardTextBar.swift; sourceTree = "<group>"; };
 		C3D345AD2B95B5EF001FC4AA /* SystemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemViewModel.swift; sourceTree = "<group>"; };
-		C3D345B12B95CD55001FC4AA /* TimeSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSetting.swift; sourceTree = "<group>"; };
+		C3D345B12B95CD55001FC4AA /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +150,7 @@
 			isa = PBXGroup;
 			children = (
 				5949F7AC2AAE0DD300E58D5A /* ContentView.swift */,
-				C336C61E2B9B0FCD001AFFA1 /* PomodoroSettingView.swift */,
+				C336C61E2B9B0FCD001AFFA1 /* TimeSettingView.swift */,
 				C3854E582BA074D000E744DB /* TimerView.swift */,
 				59A488B42AE829DA00C7E812 /* Component */,
 			);
@@ -168,7 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				C32D38152B9301EB00AE3A08 /* TechniqueCard.swift */,
-				C3D345B12B95CD55001FC4AA /* TimeSetting.swift */,
+				C3D345B12B95CD55001FC4AA /* TimePicker.swift */,
 				C3735C882B96F49A0083226C /* TimeGaugeBar.swift */,
 				C3C722332B9EFA2700E4A7BB /* StandardTextBar.swift */,
 			);
@@ -326,11 +326,11 @@
 			files = (
 				C3854E592BA074D000E744DB /* TimerView.swift in Sources */,
 				C32D38142B92FFB500AE3A08 /* StaticData.swift in Sources */,
-				C3D345B22B95CD55001FC4AA /* TimeSetting.swift in Sources */,
+				C3D345B22B95CD55001FC4AA /* TimePicker.swift in Sources */,
 				5949F7AD2AAE0DD300E58D5A /* ContentView.swift in Sources */,
 				C3C722342B9EFA2700E4A7BB /* StandardTextBar.swift in Sources */,
 				C32D38162B9301EB00AE3A08 /* TechniqueCard.swift in Sources */,
-				C336C61F2B9B0FCD001AFFA1 /* PomodoroSettingView.swift in Sources */,
+				C336C61F2B9B0FCD001AFFA1 /* TimeSettingView.swift in Sources */,
 				C3D345AE2B95B5EF001FC4AA /* SystemViewModel.swift in Sources */,
 				C39105F82B8EFE960020BD39 /* TimeViewModel.swift in Sources */,
 				C3735C892B96F49A0083226C /* TimeGaugeBar.swift in Sources */,
