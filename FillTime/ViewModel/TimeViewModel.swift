@@ -10,10 +10,12 @@ import Foundation
 class TimeViewModel: ObservableObject {
     
     private var timer: Timer?
+    // taskState = True = 작업중
+    @Published var taskState = true
     @Published var timePercent: Float = 0.3
     @Published var timeText = "00:00:00"
-    var workTime = 250
-    var restTime = 0
+    var workTime = 5
+    var restTime = 3
     var cycle = 0
     
     // TODO: 입력값 받기
@@ -23,15 +25,15 @@ class TimeViewModel: ObservableObject {
         
         timer = Timer.scheduledTimer(withTimeInterval: 1, repeats: true, block: { Timer in
             if timeLeft == 0 {
+                self.taskState.toggle()
                 self.timer?.invalidate()
                 print("Timer has Ended")
             }
-            timeLeft -= 1
             self.timeText = self.getTimeText(time: timeLeft)
             print(timeLeft)
+            timeLeft -= 1
         })
     }
-    // TODO: 타이머 중지
     // TODO: 타이머 리셋
     // TODO: 입력값 할당 및 대입
     

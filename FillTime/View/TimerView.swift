@@ -22,8 +22,11 @@ struct TimerView: View {
             }
             HStack {
                 Button(action: {
-                    // TODO: 타이머 시작
-                    timeVM.startTimer(for: 30)
+                    if timeVM.taskState {
+                        timeVM.startTimer(for: timeVM.workTime)
+                    } else {
+                        timeVM.startTimer(for: timeVM.restTime)
+                    }
                 }, label: {
                     StandardTextBar(input: "시작")
                 })
