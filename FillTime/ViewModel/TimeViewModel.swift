@@ -14,11 +14,20 @@ class TimeViewModel: ObservableObject {
     @Published var taskState = true
     @Published var timePercent: Float = 0.3
     @Published var timeText = "00:00:00"
+    @Published var cycle = 0
     var workTime = 0
     var restTime = 0
-    var cycle = 0
     
-    // TODO: 입력값 받기
+    // TODO: 반복타이머 실행 함수
+    func startLoopTimer() {
+        
+        if self.cycle != 0 {
+            // startTimer 함수 반복
+            if taskState { startTimer(for: self.workTime) } else { startTimer(for: self.restTime) }
+            self.cycle -= 1
+        } else { resetTimer() }
+    }
+    
     // MARK: 입력된 값만큼 타이머를 진행하고, 입력 값이 0이 되면 타이머를 종료
     func startTimer(for time: Int) {
         var timeLeft = time
@@ -34,7 +43,6 @@ class TimeViewModel: ObservableObject {
             timeLeft -= 1
         })
     }
-    // TODO: 타이머 리셋
     func resetTimer() {
         self.timer?.invalidate()
         self.workTime = 0
@@ -43,7 +51,6 @@ class TimeViewModel: ObservableObject {
         self.timeText = getTimeText(time: 0)
         print("Timer has Reset!")
     }
-    // TODO: 입력값 할당 및 대입
     
     // TODO: getTimeElapsedPercent() 함수 정의
     func getTimeElapsedPercent() -> Float {
