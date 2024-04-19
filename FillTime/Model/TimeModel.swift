@@ -6,3 +6,12 @@
 //
 
 import Foundation
+
+struct TimeModel {
+    var workTime = 5
+    var restTime = 5
+    var cycle = 5
+    var taskState = true
+    var timePercent: Float = 0.3
+    var timeText = "00:00:00"
+}

@@ -15,7 +15,7 @@ struct TimerView: View {
     var body: some View {
         VStack {
             ZStack {
-                TimeGaugeBar(progress: $progress)
+                TimeGaugeBar(progress: $timeVM.timePercent)
                 Text(timeVM.timeText)
                     .font(.system(size: 50))
                     .bold()
