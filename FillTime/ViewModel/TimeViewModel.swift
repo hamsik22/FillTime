@@ -27,7 +27,11 @@ class TimeViewModel: ObservableObject {
             // startTimer 함수 반복
             if taskState { startTimer(for: self.workTime) } else { startTimer(for: self.restTime) }
             self.cycle -= 1
-        } else { resetTimer() }
+            print("Cycle = \(self.cycle)")
+        } else { 
+            self.resetTimer()
+            print("Loop is Over!")
+        }
     }
     
     // TODO: TimePicker에서 설정한 데이터의 단위 변환(Int -> 분 단위)
@@ -48,8 +52,8 @@ class TimeViewModel: ObservableObject {
             }
             self.timeText = self.getTimeText(time: timeLeft)
             self.timePercent = self.getTimeElapsedPercent(time: timeLeft)
-            print(timeLeft)
-            print(self.timePercent)
+//            print(timeLeft)
+//            print(self.timePercent)
             timeLeft -= 1
         })
     }
