@@ -14,6 +14,9 @@ struct TimerView: View {
     
     var body: some View {
         VStack {
+            if timeVM.taskState {
+                Text("Work")
+            } else { Text("Rest") }
             ZStack {
                 TimeGaugeBar(progress: $timeVM.timePercent)
                 Text(timeVM.timeText)
@@ -30,11 +33,7 @@ struct TimerView: View {
         .onAppear(perform: {
             timeVM.caculateIntToMinute()
             timeVM.timeText = timeVM.getTimeText(time: timeVM.workTime)
-            if timeVM.taskState {
-                timeVM.startTimer(for: timeVM.workTime)
-            } else {
-                timeVM.startTimer(for: timeVM.restTime)
-            }
+            timeVM.startLoopTimer()
         })
         .onDisappear(perform: {
             timeVM.resetTimer()
