@@ -19,7 +19,7 @@
 		C336C61F2B9B0FCD001AFFA1 /* TimeSettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C336C61E2B9B0FCD001AFFA1 /* TimeSettingView.swift */; };
 		C34631872BCE6F8A0075A880 /* TestTimeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34631862BCE6F8A0075A880 /* TestTimeClass.swift */; };
 		C3735C892B96F49A0083226C /* TimeGaugeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3735C882B96F49A0083226C /* TimeGaugeBar.swift */; };
-		C3759E852BD304F30050E154 /* TimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3759E842BD304F30050E154 /* TimeModel.swift */; };
+		C37854CE2BD305760000E443 /* TimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37854CD2BD305760000E443 /* TimeModel.swift */; };
 		C3854E592BA074D000E744DB /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3854E582BA074D000E744DB /* TimerView.swift */; };
 		C386B9F22BA5E0BC005812D0 /* TimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39105F72B8EFE960020BD39 /* TimeViewModel.swift */; };
 		C39105F82B8EFE960020BD39 /* TimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39105F72B8EFE960020BD39 /* TimeViewModel.swift */; };
@@ -62,7 +62,7 @@
 		C336C61E2B9B0FCD001AFFA1 /* TimeSettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeSettingView.swift; sourceTree = "<group>"; };
 		C34631862BCE6F8A0075A880 /* TestTimeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTimeClass.swift; sourceTree = "<group>"; };
 		C3735C882B96F49A0083226C /* TimeGaugeBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeGaugeBar.swift; sourceTree = "<group>"; };
-		C3759E842BD304F30050E154 /* TimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeModel.swift; sourceTree = SOURCE_ROOT; };
+		C37854CD2BD305760000E443 /* TimeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeModel.swift; sourceTree = "<group>"; };
 		C3854E582BA074D000E744DB /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		C39105F72B8EFE960020BD39 /* TimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewModel.swift; sourceTree = "<group>"; };
 		C3C722332B9EFA2700E4A7BB /* StandardTextBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardTextBar.swift; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 		5949F7DC2AB07D8700E58D5A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C3759E842BD304F30050E154 /* TimeModel.swift */,
+				C37854CD2BD305760000E443 /* TimeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -337,7 +337,7 @@
 				C3D345AE2B95B5EF001FC4AA /* SystemViewModel.swift in Sources */,
 				C39105F82B8EFE960020BD39 /* TimeViewModel.swift in Sources */,
 				C3735C892B96F49A0083226C /* TimeGaugeBar.swift in Sources */,
-				C3759E852BD304F30050E154 /* TimeModel.swift in Sources */,
+				C37854CE2BD305760000E443 /* TimeModel.swift in Sources */,
 				5949F7AB2AAE0DD300E58D5A /* FillTimeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
