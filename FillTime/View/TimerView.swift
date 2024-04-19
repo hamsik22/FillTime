@@ -20,26 +20,23 @@ struct TimerView: View {
                     .font(.system(size: 50))
                     .bold()
             }
-            HStack {
-                Button(action: {
-                    if timeVM.taskState {
-                        timeVM.startTimer(for: timeVM.workTime)
-                    } else {
-                        timeVM.startTimer(for: timeVM.restTime)
-                    }
-                }, label: {
-                    StandardTextBar(input: "시작")
-                })
                 Button(action: {
                     timeVM.resetTimer()
                 }, label: {
                     StandardTextBar(input: "종료")
                 })
+            
+        }
+        .onAppear(perform: {
+            timeVM.caculateIntToMinute()
+            timeVM.timeText = timeVM.getTimeText(time: timeVM.workTime)
+            if timeVM.taskState {
+                timeVM.startTimer(for: timeVM.workTime)
+            } else {
+                timeVM.startTimer(for: timeVM.restTime)
             }
-            .onAppear(perform: {
-                timeVM.timeText = timeVM.getTimeText(time: timeVM.workTime)
-            })
-        }.onDisappear(perform: {
+        })
+        .onDisappear(perform: {
             timeVM.resetTimer()
         })
     }

@@ -18,19 +18,15 @@ struct TimeSettingView: View {
                 TimePicker(title: "휴식", arrayRange: SystemData.pomodoro.timeRange, selection: $timeVM.restTime)
                 TimePicker(title: "반복", arrayRange: SystemData.pomodoro.timeRange, selection: $timeVM.cycle)
             }
-            HStack {
                 Button(action: {
                 }, label: {
                     NavigationLink {
                         TimerView(progress: $timeVM.timePercent, timeVM: timeVM)
                     } label: {
+                        // TODO: 수정필요, 타이머에도 시작버튼이 있음
                         StandardTextBar(input: "시작")
                     }
                 })
-                Button(action: {}, label: {
-                    StandardTextBar(input: "종료")
-                })
-            }
         }
         .padding()
     }

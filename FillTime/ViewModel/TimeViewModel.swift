@@ -14,9 +14,10 @@ class TimeViewModel: ObservableObject {
     @Published var taskState = true
     @Published var timePercent: Float = 0.3
     @Published var timeText = "00:00:00"
+    // TODO: 데이터를 Model로 묶기
     @Published var cycle = 0
-    var workTime = 0
-    var restTime = 0
+    @Published var workTime = 0
+    @Published var restTime = 0
     
     // TODO: 반복타이머 실행 함수
     func startLoopTimer() {
@@ -26,6 +27,12 @@ class TimeViewModel: ObservableObject {
             if taskState { startTimer(for: self.workTime) } else { startTimer(for: self.restTime) }
             self.cycle -= 1
         } else { resetTimer() }
+    }
+    
+    // TODO: TimePicker에서 설정한 데이터의 단위 변환(Int -> 분 단위)
+    func caculateIntToMinute() {
+        self.workTime = self.workTime * 60
+        self.restTime = self.restTime * 60
     }
     
     // MARK: 입력된 값만큼 타이머를 진행하고, 입력 값이 0이 되면 타이머를 종료
