@@ -19,7 +19,21 @@ class TimeViewModel: ObservableObject {
     @Published var restTime = 0
     
     // TODO: 반복타이머 실행 함수
-    func startLoopTimer(for cycle: Int, time: Int) {
+    func startLoopTimer(time: Int) {
+        var timeLeft = time
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { timer in
+            timeLeft -= 1
+            print("TimeLeft: \(timeLeft)")
+            if timeLeft == 0 {
+                if self.cycle == 0 {
+                    timer.invalidate()
+                    print("Timer Invalidate!")
+                }
+                print("Cycle: \(self.cycle)")
+                self.cycle -= 1
+                timeLeft = time
+            }
+        })
     }
     
     // MARK: Picker에서 선택된 숫자를 초 단위로 환산
