@@ -11,33 +11,21 @@ class TimeViewModel: ObservableObject {
     
     private var timer: Timer?
     private var model = TimeModel()
-    // taskState = True = 작업중
     @Published var taskState = true
     @Published var timePercent: Float = 1.0
     @Published var timeText = "00:00:00"
-    // TODO: 데이터를 Model로 묶기
     @Published var cycle = 0
     @Published var workTime = 0
     @Published var restTime = 0
     
     // TODO: 반복타이머 실행 함수
-    func startLoopTimer() {
-        
-        if self.cycle != 0 {
-            // startTimer 함수 반복
-            if taskState { startTimer(for: self.workTime) } else { startTimer(for: self.restTime) }
-            self.cycle -= 1
-            print("Cycle = \(self.cycle)")
-        } else { 
-            self.resetTimer()
-            print("Loop is Over!")
-        }
+    func startLoopTimer(for cycle: Int, time: Int) {
     }
     
-    // TODO: TimePicker에서 설정한 데이터의 단위 변환(Int -> 분 단위)
+    // MARK: Picker에서 선택된 숫자를 초 단위로 환산
     func caculateIntToMinute() {
-        self.workTime = self.workTime * 60
-        self.restTime = self.restTime * 60
+        self.workTime = self.workTime
+        self.restTime = self.restTime
     }
     
     // MARK: 입력된 값만큼 타이머를 진행하고, 입력 값이 0이 되면 타이머를 종료
@@ -52,11 +40,10 @@ class TimeViewModel: ObservableObject {
             }
             self.timeText = self.getTimeText(time: timeLeft)
             self.timePercent = self.getTimeElapsedPercent(time: timeLeft)
-//            print(timeLeft)
-//            print(self.timePercent)
             timeLeft -= 1
         })
     }
+    
     func resetTimer() {
         self.timer?.invalidate()
         self.workTime = 0
@@ -66,7 +53,6 @@ class TimeViewModel: ObservableObject {
         print("Timer has Reset!")
     }
     
-    // TODO: getTimeElapsedPercent() 함수 정의
     func getTimeElapsedPercent(time: Int) -> Float{
         return Float(time) / Float(self.workTime)
         }
