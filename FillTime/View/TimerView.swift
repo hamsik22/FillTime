@@ -33,7 +33,6 @@ struct TimerView: View {
         .onAppear(perform: {
             timeVM.caculateIntToMinute()
             timeVM.timeText = timeVM.getTimeText(time: timeVM.workTime)
-            timeVM.startLoopTimer()
         })
         .onDisappear(perform: {
             timeVM.resetTimer()
