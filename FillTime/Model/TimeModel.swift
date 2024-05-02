@@ -12,6 +12,6 @@ struct TimeModel {
     var restTime = 5
     var cycle = 5
     var taskState = true
-    var timePercent: Float = 0.3
+    var timePercent: Float = 0.0
     var timeText = "00:00:00"
 }
