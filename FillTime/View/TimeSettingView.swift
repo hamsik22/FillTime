@@ -7,6 +7,15 @@
 
 import SwiftUI
 
+/**Picker를 통해 시간을 설정하는 화면
+ 
+ TimePicker 컴포넌트를 활용하여 값을 설정한다.
+ 
+ # 표시되는 정보
+ - 설정하는 값의 정보: String
+ - 설정 값 범위: [Int]
+ - 설정 값 바인딩 변수: $Int
+ */
 struct TimeSettingView: View {
     
     @ObservedObject var timeVM: TimeViewModel
@@ -35,3 +44,4 @@ struct TimeSettingView: View {
 #Preview {
     TimeSettingView(timeVM: TimeViewModel())
 }
+

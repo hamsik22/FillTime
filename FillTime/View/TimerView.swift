@@ -9,7 +9,12 @@ import SwiftUI
 
 /**타이머가 실행되는 뷰
  
- 뷰가 나타남과 동시에 타이머는 실행된다. */
+ 뷰가 나타남과 동시에 타이머는 실행된다.
+ 
+# 표시되는 정보
+  - 남은 시간: String
+ - 남은 시간의 게이지: Float
+ */
 struct TimerView: View {
     
     @Binding var progress: Float
@@ -36,7 +41,7 @@ struct TimerView: View {
         .onAppear(perform: {
             timeVM.caculateIntToMinute()
             timeVM.timeText = timeVM.getTimeText(time: timeVM.workTime)
-            timeVM.startLoopTimer(time: timeVM.workTime)
+            timeVM.startLoopTimer()
         })
         .onDisappear(perform: {
             timeVM.resetTimer()
