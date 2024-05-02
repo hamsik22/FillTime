@@ -13,12 +13,7 @@ struct ContentView: View {
     @ObservedObject var timeVM: TimeViewModel
     
     var body: some View {
-            NavigationLink {
-                TimeSettingView(timeVM: timeVM)
-            } label: {
-                TechniqueCard(title: SystemText.pomodoro.title, description: SystemText.pomodoro.description)
-                .tint(.black)
-            }
+        TimeSettingView(timeVM: timeVM)
         }
     }
 
