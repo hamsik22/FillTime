@@ -19,8 +19,8 @@ class TimeViewModel: ObservableObject {
     @Published var restTime = 0
     
     // TODO: 반복타이머 실행 함수
-    func startLoopTimer(time: Int) {
-        var timeLeft = time
+    func startLoopTimer() {
+        var timeLeft = self.workTime
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { timer in
             timeLeft -= 1
             print("TimeLeft: \(timeLeft)")
@@ -31,7 +31,7 @@ class TimeViewModel: ObservableObject {
                 }
                 print("Cycle: \(self.cycle)")
                 self.cycle -= 1
-                timeLeft = time
+                timeLeft = self.workTime
             }
         })
     }
