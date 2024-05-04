@@ -7,14 +7,17 @@
 
 import SwiftUI
 
-/**타이머가 실행되는 뷰
+/**타이머가 실행되는 화면
  
  뷰가 나타남과 동시에 타이머는 실행된다.
  
 # 표시되는 정보
   - 남은 시간: String
  - 남은 시간의 게이지: Float
+# 발생가능 이벤트
+ - 타이머 정지
  */
+
 struct TimerView: View {
     
     @Binding var progress: Float

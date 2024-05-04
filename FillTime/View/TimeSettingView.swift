@@ -15,6 +15,9 @@ import SwiftUI
  - 설정하는 값의 정보: String
  - 설정 값 범위: [Int]
  - 설정 값 바인딩 변수: $Int
+ # 역할
+ Picker에서 선택한 값을 ViewModel에 바인딩
+ 
  */
 struct TimeSettingView: View {
     

@@ -7,6 +7,13 @@
 
 import SwiftUI
 
+/**남은 시간을 게이지로 표시하는 화면
+ 
+ # 필요한 데이터
+ - 게이지: Float
+ 
+ 게이지 = 현재남은시간 / 처음설정한시간
+ */
 struct TimeGaugeBar: View {
     
     @Binding var progress: Float
