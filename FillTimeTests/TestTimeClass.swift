@@ -9,11 +9,21 @@ import XCTest
 @testable import FillTime
 
 final class TestTimeClass: XCTestCase {
+    
+    var timerTests: TimeModel!
 
     override func setUpWithError() throws {
+        timerTests = TimeModel()
     }
 
     override func tearDownWithError() throws {
+        timerTests = nil
+    }
+    
+    // MARK: 10초동안 동작하는 타이머
+    func testStartTimer() {
+        timerTests.startTimer(for: 10)
+        XCTAssertTrue(timerTests.timer.isValid, "It's Still Running!") 
     }
 
     // MARK: 타이머가 5초 뒤에 멈춘다
