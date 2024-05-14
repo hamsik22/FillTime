@@ -11,9 +11,15 @@ import SwiftUI
 struct ContentView: View {
     
     @ObservedObject var timeVM: TimeViewModel
+    var model = TimeModel()
     
     var body: some View {
-        TimeSettingView(timeVM: timeVM)
+        Text("Hello, Users!")
+        Button(action: {
+            model.startTimer(for: 10)
+        }, label: {
+            /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
+        })
         }
     }
 

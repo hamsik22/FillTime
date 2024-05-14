@@ -7,8 +7,21 @@
 
 import Foundation
 
-// TODO: 가설 1 - 모델에서 타이머 인스턴스를 관리한다.
-
 class TimeModel {
     
+    var timer = Timer()
+    
+    // TODO: 가장 기본적인 타이머 코드를 만들자
+    func startTimer(for time: Int) {
+        var timeLeft = time
+        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { t in
+            if timeLeft == 0 {
+                t.invalidate()
+                print("timer has invalidate!")
+            } else {
+                timeLeft -= 1
+                print("timeLeft : \(timeLeft)")
+            }
+        }
+    }
 }
