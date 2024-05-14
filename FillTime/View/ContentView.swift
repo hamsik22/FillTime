@@ -14,14 +14,16 @@ struct ContentView: View {
     var model = TimeModel()
     
     var body: some View {
-        Text("Hello, Users!")
-        Button(action: {
-            model.startTimer(for: 10)
-        }, label: {
-            /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
-        })
+        VStack{
+            Text("Hello, Users!")
+            Button(action: {
+                model.startLoopTimer()
+            }, label: {
+                /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
+            })
         }
     }
+}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
