@@ -9,6 +9,7 @@ import Foundation
 
 class TimeViewModel: ObservableObject {
     
+<<<<<<< HEAD
     private var timer: Timer?
     private var model = TimeModel()
     @Published var taskState = true
@@ -81,4 +82,6 @@ class TimeViewModel: ObservableObject {
         
         return String(format: "%02d:%02d:%02d", hours, minutes, seconds)
     }
+=======
+>>>>>>> 3211979 ([Delete]: 코드 대량 삭제)
 }
