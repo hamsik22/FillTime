@@ -10,6 +10,7 @@ import Foundation
 class TimeViewModel: ObservableObject {
     
 <<<<<<< HEAD
+<<<<<<< HEAD
     private var timer: Timer?
     private var model = TimeModel()
     @Published var taskState = true
@@ -84,4 +85,23 @@ class TimeViewModel: ObservableObject {
     }
 =======
 >>>>>>> 3211979 ([Delete]: 코드 대량 삭제)
+=======
+    @Published var workTime = 0
+    @Published var timeText = ""
+    
+    private var cancellables = Set<AnyCancellable>()
+    var model = TimeModel()
+    
+    init() {
+        $workTime.sink { item in
+            self.model.workTime = item
+        }
+        .store(in: &cancellables)
+    }
+    
+    func getTimeText() {
+        
+    }
+    
+>>>>>>> eaed573 ([Code]: Combine 적용)
 }
