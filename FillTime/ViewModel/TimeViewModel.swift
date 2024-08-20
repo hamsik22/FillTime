@@ -3,12 +3,14 @@
 //  FillTime
 //
 //  Created by 황석현 on 2/28/24.
-//
+/// ViewModel에는 View에게서 전달받고 전달할 데이터의 프로퍼티만 존재해야한다.
 
 import Foundation
+import Combine
 
 class TimeViewModel: ObservableObject {
     
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     private var timer: Timer?
@@ -17,9 +19,12 @@ class TimeViewModel: ObservableObject {
     @Published var timePercent: Float = 1.0
     @Published var timeText = "00:00:00"
     @Published var cycle = 0
+=======
+>>>>>>> eaed5736e75c0889d84099faaae8059faf50b1f5
     @Published var workTime = 0
-    @Published var restTime = 0
+    @Published var timeText = ""
     
+<<<<<<< HEAD
     // TODO: 반복타이머 실행 함수
     func startLoopTimer() {
         var timeLeft = self.workTime
@@ -104,4 +109,20 @@ class TimeViewModel: ObservableObject {
     }
     
 >>>>>>> eaed573 ([Code]: Combine 적용)
+=======
+    private var cancellables = Set<AnyCancellable>()
+    var model = TimeModel()
+    
+    init() {
+        $workTime.sink { item in
+            self.model.workTime = item
+        }
+        .store(in: &cancellables)
+    }
+    
+    func getTimeText() {
+        
+    }
+    
+>>>>>>> eaed5736e75c0889d84099faaae8059faf50b1f5
 }
