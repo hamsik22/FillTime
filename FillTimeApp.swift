@@ -13,9 +13,7 @@ struct FillTimeApp: App {
     var body: some Scene {
         
         WindowGroup {
-            NavigationStack {
-                ContentView(timeVM: TimeViewModel())
-            }
+                ContentView()
         }
     }
 }

@@ -14,17 +14,8 @@
 		5949F7B22AAE0DD600E58D5A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5949F7B12AAE0DD600E58D5A /* Preview Assets.xcassets */; };
 		5949F7C62AAE0DD600E58D5A /* FillTimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949F7C52AAE0DD600E58D5A /* FillTimeUITests.swift */; };
 		5949F7C82AAE0DD600E58D5A /* FillTimeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949F7C72AAE0DD600E58D5A /* FillTimeUITestsLaunchTests.swift */; };
-		C32D38142B92FFB500AE3A08 /* StaticData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D38132B92FFB500AE3A08 /* StaticData.swift */; };
-		C32D38162B9301EB00AE3A08 /* TechniqueCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C32D38152B9301EB00AE3A08 /* TechniqueCard.swift */; };
 		C34631872BCE6F8A0075A880 /* TestTimeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34631862BCE6F8A0075A880 /* TestTimeClass.swift */; };
 		C350D6DB2BE227F000359B6B /* Develop Document in Resources */ = {isa = PBXBuildFile; fileRef = C350D6DA2BE227F000359B6B /* Develop Document */; };
-		C3735C892B96F49A0083226C /* TimeGaugeBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3735C882B96F49A0083226C /* TimeGaugeBar.swift */; };
-		C37854CE2BD305760000E443 /* TimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C37854CD2BD305760000E443 /* TimeModel.swift */; };
-		C386B9F22BA5E0BC005812D0 /* TimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39105F72B8EFE960020BD39 /* TimeViewModel.swift */; };
-		C39105F82B8EFE960020BD39 /* TimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C39105F72B8EFE960020BD39 /* TimeViewModel.swift */; };
-		C3C722342B9EFA2700E4A7BB /* StandardTextBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3C722332B9EFA2700E4A7BB /* StandardTextBar.swift */; };
-		C3D345AE2B95B5EF001FC4AA /* SystemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D345AD2B95B5EF001FC4AA /* SystemViewModel.swift */; };
-		C3D345B22B95CD55001FC4AA /* TimePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3D345B12B95CD55001FC4AA /* TimePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,16 +47,8 @@
 		5949F7C52AAE0DD600E58D5A /* FillTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillTimeUITests.swift; sourceTree = "<group>"; };
 		5949F7C72AAE0DD600E58D5A /* FillTimeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillTimeUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		C32AAF532B514207005D38F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
-		C32D38132B92FFB500AE3A08 /* StaticData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticData.swift; sourceTree = "<group>"; };
-		C32D38152B9301EB00AE3A08 /* TechniqueCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TechniqueCard.swift; sourceTree = "<group>"; };
 		C34631862BCE6F8A0075A880 /* TestTimeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTimeClass.swift; sourceTree = "<group>"; };
 		C350D6DA2BE227F000359B6B /* Develop Document */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Develop Document"; sourceTree = "<group>"; };
-		C3735C882B96F49A0083226C /* TimeGaugeBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeGaugeBar.swift; sourceTree = "<group>"; };
-		C37854CD2BD305760000E443 /* TimeModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeModel.swift; sourceTree = "<group>"; };
-		C39105F72B8EFE960020BD39 /* TimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewModel.swift; sourceTree = "<group>"; };
-		C3C722332B9EFA2700E4A7BB /* StandardTextBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandardTextBar.swift; sourceTree = "<group>"; };
-		C3D345AD2B95B5EF001FC4AA /* SystemViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SystemViewModel.swift; sourceTree = "<group>"; };
-		C3D345B12B95CD55001FC4AA /* TimePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimePicker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +79,7 @@
 		5949F79E2AAE0DD300E58D5A = {
 			isa = PBXGroup;
 			children = (
+				5949F7AA2AAE0DD300E58D5A /* FillTimeApp.swift */,
 				5949F7A92AAE0DD300E58D5A /* FillTime */,
 				5949F7C42AAE0DD600E58D5A /* FillTimeTests */,
 				5949F7A82AAE0DD300E58D5A /* Products */,
@@ -118,7 +102,6 @@
 				C32D38122B92FFA000AE3A08 /* Content */,
 				C32AAF532B514207005D38F1 /* Info.plist */,
 				C350D6DA2BE227F000359B6B /* Develop Document */,
-				5949F7AA2AAE0DD300E58D5A /* FillTimeApp.swift */,
 				5949F7D62AAF138D00E58D5A /* View */,
 				91F21E7B2B662DFC0030EC5C /* ViewModel */,
 				5949F7DC2AB07D8700E58D5A /* Model */,
@@ -159,7 +142,6 @@
 		5949F7DC2AB07D8700E58D5A /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C37854CD2BD305760000E443 /* TimeModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -167,10 +149,6 @@
 		59A488B42AE829DA00C7E812 /* Component */ = {
 			isa = PBXGroup;
 			children = (
-				C32D38152B9301EB00AE3A08 /* TechniqueCard.swift */,
-				C3D345B12B95CD55001FC4AA /* TimePicker.swift */,
-				C3735C882B96F49A0083226C /* TimeGaugeBar.swift */,
-				C3C722332B9EFA2700E4A7BB /* StandardTextBar.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -178,8 +156,6 @@
 		91F21E7B2B662DFC0030EC5C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				C39105F72B8EFE960020BD39 /* TimeViewModel.swift */,
-				C3D345AD2B95B5EF001FC4AA /* SystemViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -187,7 +163,6 @@
 		C32D38122B92FFA000AE3A08 /* Content */ = {
 			isa = PBXGroup;
 			children = (
-				C32D38132B92FFB500AE3A08 /* StaticData.swift */,
 			);
 			path = Content;
 			sourceTree = "<group>";
@@ -325,15 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C32D38142B92FFB500AE3A08 /* StaticData.swift in Sources */,
-				C3D345B22B95CD55001FC4AA /* TimePicker.swift in Sources */,
 				5949F7AD2AAE0DD300E58D5A /* ContentView.swift in Sources */,
-				C3C722342B9EFA2700E4A7BB /* StandardTextBar.swift in Sources */,
-				C32D38162B9301EB00AE3A08 /* TechniqueCard.swift in Sources */,
-				C3D345AE2B95B5EF001FC4AA /* SystemViewModel.swift in Sources */,
-				C39105F82B8EFE960020BD39 /* TimeViewModel.swift in Sources */,
-				C3735C892B96F49A0083226C /* TimeGaugeBar.swift in Sources */,
-				C37854CE2BD305760000E443 /* TimeModel.swift in Sources */,
 				5949F7AB2AAE0DD300E58D5A /* FillTimeApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -351,7 +318,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5949F7C82AAE0DD600E58D5A /* FillTimeUITestsLaunchTests.swift in Sources */,
-				C386B9F22BA5E0BC005812D0 /* TimeViewModel.swift in Sources */,
 				5949F7C62AAE0DD600E58D5A /* FillTimeUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
