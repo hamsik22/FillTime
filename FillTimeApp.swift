@@ -10,10 +10,13 @@ import SwiftUI
 @main
 struct FillTimeApp: App {
     
+    @StateObject var viewModel = TimeViewModel()
+    
     var body: some Scene {
         
         WindowGroup {
                 ContentView()
+                    .environmentObject(viewModel)
         }
     }
 }
