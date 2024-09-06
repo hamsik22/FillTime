@@ -10,32 +10,19 @@ import Foundation
 class TimeViewModel: ObservableObject {
     
     private var model = TimeModel()
-    @Published var dataList:[TimeData] = []
+    @Published var contentArray: [ContentModel]
     
-    
-    /// 데이터를 저장
-    func saveData(title: String, description: String?) {
-        // .append 메서드를 동작시키기 위함
-        if model.timeData == nil {
-            model.timeData = []
-        }
-        
-        if let content = description {
-            model.timeData?.append(TimeData(title: title, description: content))
-        } else {
-            model.timeData?.append(TimeData(title: title))
-        }
-        
-        if let data = model.timeData {
-            print("Saved Data = \(data.count)")
-        } else { print("Data not Saved!") }
+    init() {
+        self.contentArray = model.contentArray
     }
     
-    /// TimeData 리스트 업데이트
-    func fetchData() {
-        if let data = model.timeData {
-            dataList = data
-            print("Data Count = \(dataList.count)")
-        } else { print("DataList Has No Data!") }
+    /// 정수형 값을 "00:00:00" 형태로 변환한다.
+    func convertToTime(input: Int) -> String {
+        let hours = input / 3600
+        let minute = (input % 3600) / 60
+        let remainingSeconds = input % 60
+        
+        return String(format: "%02d:%02d:%02d", hours, minute, remainingSeconds)
     }
+    
 }

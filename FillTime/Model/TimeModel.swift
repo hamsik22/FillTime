@@ -7,15 +7,13 @@
 
 import Foundation
 
-struct TimeModel: Identifiable {
-    let id = UUID()
-    var timeData: [TimeData]?
+struct TimeModel {
+    var contentArray: [ContentModel] = [ContentModel(title: "Mock1", totalTime: 0), 
+                                        ContentModel(title: "Mock2", totalTime: 30),
+                                        ContentModel(title: "Mock3", totalTime: 60)]
 }
 
-struct TimeData: Identifiable {
-    let id = UUID()
+struct ContentModel {
     var title: String
-    var description: String?
-    var totalTime = 0
-    var createdAt = Date()
+    var totalTime: Int
 }

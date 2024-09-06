@@ -18,7 +18,6 @@
 		C350D6DB2BE227F000359B6B /* Develop Document in Resources */ = {isa = PBXBuildFile; fileRef = C350D6DA2BE227F000359B6B /* Develop Document */; };
 		C3CC7BAA2C786D0B00FFC271 /* TimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CC7BA92C786D0B00FFC271 /* TimeModel.swift */; };
 		C3CC7BAC2C786D1400FFC271 /* TimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CC7BAB2C786D1400FFC271 /* TimeViewModel.swift */; };
-		C3CC7BAE2C7873D300FFC271 /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CC7BAD2C7873D300FFC271 /* EditView.swift */; };
 		C3CC7BB02C788F4E00FFC271 /* TimeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CC7BAF2C788F4E00FFC271 /* TimeListView.swift */; };
 		C3CC7BB22C788F5900FFC271 /* PreferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CC7BB12C788F5900FFC271 /* PreferenceView.swift */; };
 		C3CC7BB42C788FB100FFC271 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CC7BB32C788FB100FFC271 /* CalendarView.swift */; };
@@ -57,7 +56,6 @@
 		C350D6DA2BE227F000359B6B /* Develop Document */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Develop Document"; sourceTree = "<group>"; };
 		C3CC7BA92C786D0B00FFC271 /* TimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeModel.swift; sourceTree = "<group>"; };
 		C3CC7BAB2C786D1400FFC271 /* TimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewModel.swift; sourceTree = "<group>"; };
-		C3CC7BAD2C7873D300FFC271 /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
 		C3CC7BAF2C788F4E00FFC271 /* TimeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeListView.swift; sourceTree = "<group>"; };
 		C3CC7BB12C788F5900FFC271 /* PreferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceView.swift; sourceTree = "<group>"; };
 		C3CC7BB32C788FB100FFC271 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
@@ -92,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				5949F7AA2AAE0DD300E58D5A /* FillTimeApp.swift */,
+				5949F7AC2AAE0DD300E58D5A /* ContentView.swift */,
 				5949F7A92AAE0DD300E58D5A /* FillTime */,
 				5949F7C42AAE0DD600E58D5A /* FillTimeTests */,
 				5949F7A82AAE0DD300E58D5A /* Products */,
@@ -146,11 +145,9 @@
 			isa = PBXGroup;
 			children = (
 				C3CC7BB32C788FB100FFC271 /* CalendarView.swift */,
-				59A488B42AE829DA00C7E812 /* Component */,
-				5949F7AC2AAE0DD300E58D5A /* ContentView.swift */,
-				C3CC7BAD2C7873D300FFC271 /* EditView.swift */,
 				C3CC7BB12C788F5900FFC271 /* PreferenceView.swift */,
 				C3CC7BAF2C788F4E00FFC271 /* TimeListView.swift */,
+				59A488B42AE829DA00C7E812 /* Component */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -319,7 +316,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5949F7AD2AAE0DD300E58D5A /* ContentView.swift in Sources */,
-				C3CC7BAE2C7873D300FFC271 /* EditView.swift in Sources */,
 				C3CC7BB42C788FB100FFC271 /* CalendarView.swift in Sources */,
 				C3CC7BAC2C786D1400FFC271 /* TimeViewModel.swift in Sources */,
 				C3CC7BB02C788F4E00FFC271 /* TimeListView.swift in Sources */,
