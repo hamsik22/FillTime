@@ -9,15 +9,19 @@ import Foundation
 
 class TimeViewModel: ObservableObject {
     
-    private var model = TimeModel()
-    @Published var contentArray: [ContentModel]
+    @Published var sharedModel: TimeModel
+    
+    var timeList: [TimeData] {
+        return sharedModel.contentList
+    }
+    
     
     init() {
-        self.contentArray = model.contentArray
+        self.sharedModel = TimeModel()
     }
     
     /// 정수형 값을 "00:00:00" 형태로 변환한다.
-    func convertToTime(input: Int) -> String {
+    func convertToTimeString(input: Int) -> String {
         let hours = input / 3600
         let minute = (input % 3600) / 60
         let remainingSeconds = input % 60

@@ -7,13 +7,29 @@
 
 import Foundation
 
-struct TimeModel {
-    var contentArray: [ContentModel] = [ContentModel(title: "Mock1", totalTime: 0), 
-                                        ContentModel(title: "Mock2", totalTime: 30),
-                                        ContentModel(title: "Mock3", totalTime: 60)]
+class TimeModel: ObservableObject {
+    @Published var contentList: [TimeData]
+    
+    init() {
+        self.contentList = TimeModel.sampleData
+    }
+    
 }
 
-struct ContentModel {
+extension TimeModel {
+    static var sampleData: [TimeData] {
+        return [
+            TimeData(title: "Sample1", totalSeconds: 1),
+            TimeData(title: "Sample2", totalSeconds: 100),
+            TimeData(title: "Sample3", totalSeconds: 1000),
+            TimeData(title: "Sample4", totalSeconds: 10000)
+        ]
+    }
+}
+
+struct TimeData: Identifiable {
+    let id = UUID()
+    let createdAt = Date.now
     var title: String
-    var totalTime: Int
+    var totalSeconds: Int
 }
