@@ -19,6 +19,7 @@ struct TimeListView: View {
         }
     }
     
+    // MARK: ConditionalTimeList
     /// 데이터 유무에 따른 컨텐츠를 보여주는 화면
     @ViewBuilder
     var conditionalTimeList: some View {
@@ -28,15 +29,38 @@ struct TimeListView: View {
         }
         
         if dataHasExist {
-            ForEach(viewModel.timeList) { item in
-                VStack {
-                    Text(item.title)
-                    Text("\(item.totalSeconds)")
-                }
-            }
+            TimeListCellWithController
         } else {
             TextBox(content: "It's Empty")
         }
+    }
+    
+    // MARK: TimeListCellWithController
+    /// 재생버튼이 있는 데이터셀을 보여주는 리스트 화면
+    @ViewBuilder
+    var TimeListCellWithController: some View {
+        
+        ForEach(viewModel.timeList) { cell in
+            HStack {
+                // Informations
+                VStack {
+                    Text(cell.title)
+                    Text("\(cell.totalSeconds)")
+                }
+                .padding()
+                .background(.white)
+                
+                // Controller Button
+                Button(action: {}, label: {
+                    Circle()
+                        .frame(width: 20, height: 20)
+                        .foregroundColor(.blue)
+                })
+            }
+            .padding()
+            .background(.gray)
+        }
+        
     }
 }
 

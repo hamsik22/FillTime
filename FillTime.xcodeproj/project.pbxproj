@@ -112,7 +112,6 @@
 		5949F7A92AAE0DD300E58D5A /* FillTime */ = {
 			isa = PBXGroup;
 			children = (
-				C32D38122B92FFA000AE3A08 /* Content */,
 				C32AAF532B514207005D38F1 /* Info.plist */,
 				C350D6DA2BE227F000359B6B /* Develop Document */,
 				5949F7D62AAF138D00E58D5A /* View */,
@@ -167,7 +166,8 @@
 			children = (
 				91F0A0892C969F4200C1152C /* TextBox.swift */,
 			);
-			path = Component;
+			name = Component;
+			path = Components;
 			sourceTree = "<group>";
 		};
 		91F21E7B2B662DFC0030EC5C /* ViewModel */ = {
@@ -176,13 +176,6 @@
 				C3CC7BAB2C786D1400FFC271 /* TimeViewModel.swift */,
 			);
 			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		C32D38122B92FFA000AE3A08 /* Content */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Content;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
