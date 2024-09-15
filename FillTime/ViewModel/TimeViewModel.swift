@@ -15,7 +15,6 @@ class TimeViewModel: ObservableObject {
         return sharedModel.contentList
     }
     
-    
     init() {
         self.sharedModel = TimeModel()
     }
