@@ -20,7 +20,7 @@
 		C3CC7BAA2C786D0B00FFC271 /* TimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CC7BA92C786D0B00FFC271 /* TimeModel.swift */; };
 		C3CC7BAC2C786D1400FFC271 /* TimeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CC7BAB2C786D1400FFC271 /* TimeViewModel.swift */; };
 		C3CC7BB02C788F4E00FFC271 /* TimeListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CC7BAF2C788F4E00FFC271 /* TimeListView.swift */; };
-		C3CC7BB22C788F5900FFC271 /* PreferenceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CC7BB12C788F5900FFC271 /* PreferenceView.swift */; };
+		C3CC7BB22C788F5900FFC271 /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CC7BB12C788F5900FFC271 /* SettingView.swift */; };
 		C3CC7BB42C788FB100FFC271 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CC7BB32C788FB100FFC271 /* CalendarView.swift */; };
 /* End PBXBuildFile section */
 
@@ -59,7 +59,7 @@
 		C3CC7BA92C786D0B00FFC271 /* TimeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeModel.swift; sourceTree = "<group>"; };
 		C3CC7BAB2C786D1400FFC271 /* TimeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeViewModel.swift; sourceTree = "<group>"; };
 		C3CC7BAF2C788F4E00FFC271 /* TimeListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimeListView.swift; sourceTree = "<group>"; };
-		C3CC7BB12C788F5900FFC271 /* PreferenceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreferenceView.swift; sourceTree = "<group>"; };
+		C3CC7BB12C788F5900FFC271 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
 		C3CC7BB32C788FB100FFC271 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,7 +92,6 @@
 			isa = PBXGroup;
 			children = (
 				5949F7AA2AAE0DD300E58D5A /* FillTimeApp.swift */,
-				5949F7AC2AAE0DD300E58D5A /* ContentView.swift */,
 				5949F7A92AAE0DD300E58D5A /* FillTime */,
 				5949F7C42AAE0DD600E58D5A /* FillTimeTests */,
 				5949F7A82AAE0DD300E58D5A /* Products */,
@@ -112,6 +111,7 @@
 		5949F7A92AAE0DD300E58D5A /* FillTime */ = {
 			isa = PBXGroup;
 			children = (
+				5949F7AC2AAE0DD300E58D5A /* ContentView.swift */,
 				C32AAF532B514207005D38F1 /* Info.plist */,
 				C350D6DA2BE227F000359B6B /* Develop Document */,
 				5949F7D62AAF138D00E58D5A /* View */,
@@ -146,7 +146,7 @@
 			isa = PBXGroup;
 			children = (
 				C3CC7BB32C788FB100FFC271 /* CalendarView.swift */,
-				C3CC7BB12C788F5900FFC271 /* PreferenceView.swift */,
+				C3CC7BB12C788F5900FFC271 /* SettingView.swift */,
 				C3CC7BAF2C788F4E00FFC271 /* TimeListView.swift */,
 				59A488B42AE829DA00C7E812 /* Component */,
 			);
@@ -166,8 +166,7 @@
 			children = (
 				91F0A0892C969F4200C1152C /* TextBox.swift */,
 			);
-			name = Component;
-			path = Components;
+			path = Component;
 			sourceTree = "<group>";
 		};
 		91F21E7B2B662DFC0030EC5C /* ViewModel */ = {
@@ -318,7 +317,7 @@
 				C3CC7BAA2C786D0B00FFC271 /* TimeModel.swift in Sources */,
 				5949F7AB2AAE0DD300E58D5A /* FillTimeApp.swift in Sources */,
 				91F0A08A2C969F4200C1152C /* TextBox.swift in Sources */,
-				C3CC7BB22C788F5900FFC271 /* PreferenceView.swift in Sources */,
+				C3CC7BB22C788F5900FFC271 /* SettingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

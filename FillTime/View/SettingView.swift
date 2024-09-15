@@ -8,12 +8,12 @@
 import SwiftUI
 
 /// 앱 설정 화면
-struct PreferenceView: View {
+struct SettingView: View {
     var body: some View {
         Text("설정 화면")
     }
 }
 
 #Preview {
-    PreferenceView()
+    SettingView()
 }

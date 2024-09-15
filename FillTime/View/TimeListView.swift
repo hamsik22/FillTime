@@ -15,8 +15,33 @@ struct TimeListView: View {
     // MARK: 리스트 전체 화면
     var body: some View {
         VStack {
+            topBar
+            
             conditionalTimeList
         }
+    }
+    
+    // MARK: TopBar
+    /// 상단의 어플마크와 데이터추가 버튼
+    @ViewBuilder
+    var topBar: some View {
+        HStack {
+            Text("FillTime")
+                .font(.largeTitle)
+            
+            Spacer()
+            
+            Button(action: {
+                // TODO: 데이터 추가
+            }, label: {
+                Image(systemName: "plus")
+                    .resizable()
+                    .scaledToFit()
+                    .frame(width: 25)
+                    .bold()
+            })
+        }
+        .padding(.horizontal, 20)
     }
     
     // MARK: ConditionalTimeList
@@ -51,19 +76,21 @@ struct TimeListView: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding()
-                .background(.white)
                 .padding(.horizontal, 10)
                 
                 // Controller Button
-                Button(action: {}, label: {
+                Button(action: {
+                    // TODO: 타이머 실행
+                }, label: {
                     Image("PlayButton")
                         .frame(width: 40, height: 40)
                 })
             }
             .padding()
             .frame(maxWidth: .infinity)
-            .background(.gray)
-            .padding()
+            .background(.gray.opacity(0.2))
+            .clipShape(.rect(cornerRadius: 20))
+            .padding(.horizontal, 15)
         }
         
     }

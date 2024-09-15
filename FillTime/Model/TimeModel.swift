@@ -8,10 +8,10 @@
 import Foundation
 
 class TimeModel: ObservableObject {
-    @Published var contentList: [TimeData]
+    @Published var contentList: [TimeData] = []
     
     init() {
-        self.contentList = TimeModel.sampleData
+        contentList = TimeModel.sampleData
     }
     
 }
