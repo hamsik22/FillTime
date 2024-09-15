@@ -40,25 +40,30 @@ struct TimeListView: View {
     @ViewBuilder
     var TimeListCellWithController: some View {
         
-        ForEach(viewModel.timeList) { cell in
+        ForEach(viewModel.timeList) { item in
             HStack {
                 // Informations
-                VStack {
-                    Text(cell.title)
-                    Text("\(cell.totalSeconds)")
+                VStack(alignment: .leading, spacing: 10) {
+                    Text(item.title)
+                        .font(.system(size: 24))
+                    Text("D + \(viewModel.timeFormatt(input: item.totalSeconds))")
+                        .font(.system(size: 24))
                 }
+                .frame(maxWidth: .infinity, alignment: .leading)
                 .padding()
                 .background(.white)
+                .padding(.horizontal, 10)
                 
                 // Controller Button
                 Button(action: {}, label: {
-                    Circle()
-                        .frame(width: 20, height: 20)
-                        .foregroundColor(.blue)
+                    Image("PlayButton")
+                        .frame(width: 40, height: 40)
                 })
             }
             .padding()
+            .frame(maxWidth: .infinity)
             .background(.gray)
+            .padding()
         }
         
     }

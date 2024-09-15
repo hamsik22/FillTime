@@ -20,7 +20,7 @@ class TimeViewModel: ObservableObject {
     }
     
     /// 정수형 값을 "00:00:00" 형태로 변환한다.
-    func convertToTimeString(input: Int) -> String {
+    func timeFormatt(input: Int) -> String {
         let hours = input / 3600
         let minute = (input % 3600) / 60
         let remainingSeconds = input % 60
