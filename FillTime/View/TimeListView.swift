@@ -11,6 +11,9 @@ import SwiftUI
 struct TimeListView: View {
     
     @ObservedObject var viewModel = TimeViewModel()
+    @State private var isAddingContent = false
+    @State private var contentTitle = ""
+    @State private var contentDescription = ""
     
     // MARK: 리스트 전체 화면
     var body: some View {
@@ -19,6 +22,9 @@ struct TimeListView: View {
             
             conditionalTimeList
         }
+        .sheet(isPresented: $isAddingContent, onDismiss: { isAddingContent = false }, content: {
+            AddCotentModal
+        })
     }
     
     // MARK: TopBar
@@ -33,6 +39,7 @@ struct TimeListView: View {
             
             Button(action: {
                 // TODO: 데이터 추가
+                isAddingContent = true
             }, label: {
                 Image(systemName: "plus")
                     .resizable()
@@ -76,7 +83,6 @@ struct TimeListView: View {
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
                 .padding()
-                .padding(.horizontal, 10)
                 
                 // Controller Button
                 Button(action: {
@@ -84,6 +90,7 @@ struct TimeListView: View {
                 }, label: {
                     Image("PlayButton")
                         .frame(width: 40, height: 40)
+                        .padding(.horizontal, 10)
                 })
             }
             .padding()
@@ -93,6 +100,29 @@ struct TimeListView: View {
             .padding(.horizontal, 15)
         }
         
+    }
+    
+    // MARK: AddContentModal
+    /// 컨텐츠를 추가하는 모달 화면
+    @ViewBuilder
+    var AddCotentModal: some View {
+        VStack {
+            TextField("제목 입력", text: $contentTitle, prompt: Text("제목을 입력하세요"))
+            
+            TextField("설명 입력", text: $contentDescription, prompt: Text("설명을 입력하세요"))
+            
+            Button(action: {
+                // TODO: 저장하기
+            }, label: {
+                Text("저장")
+            })
+            
+            Button(action: {
+                // TODO: 취소하기
+            }, label: {
+                Text("취소")
+            })
+        }
     }
 }
 
