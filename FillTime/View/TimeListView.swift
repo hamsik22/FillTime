@@ -20,6 +20,7 @@ struct TimeListView: View {
         VStack {
             topBar
             
+            // TODO: 데이터 변화를 감지하여 실시간으로 보여줘야함.
             conditionalTimeList
         }
         .sheet(isPresented: $isAddingContent, onDismiss: { isAddingContent = false }, content: {
@@ -38,7 +39,7 @@ struct TimeListView: View {
             Spacer()
             
             Button(action: {
-                // TODO: 데이터 추가
+                // 데이터를 추가하는 모달뷰 표시
                 isAddingContent = true
             }, label: {
                 Image(systemName: "plus")
@@ -104,6 +105,10 @@ struct TimeListView: View {
     
     // MARK: AddContentModal
     /// 컨텐츠를 추가하는 모달 화면
+    ///
+    ///  **개선점** :
+    /// - 버튼 하나에 너무 많은 동작이 포함되어 있다.
+    /// - 데이터 Fetch 시점이 버튼에 있다.
     @ViewBuilder
     var AddCotentModal: some View {
         VStack {
@@ -112,13 +117,21 @@ struct TimeListView: View {
             TextField("설명 입력", text: $contentDescription, prompt: Text("설명을 입력하세요"))
             
             Button(action: {
-                // TODO: 저장하기
+                // 저장하기
+                viewModel.addData(title: contentTitle)
+                print("Data \(contentTitle) Saved!")
+                isAddingContent = false
+                contentTitle = ""
+                viewModel.fetchData()
             }, label: {
                 Text("저장")
             })
             
             Button(action: {
-                // TODO: 취소하기
+                // 취소하기
+                contentTitle = ""
+                isAddingContent = false
+                viewModel.fetchData()
             }, label: {
                 Text("취소")
             })

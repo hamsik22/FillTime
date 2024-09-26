@@ -10,10 +10,6 @@ import Foundation
 class TimeModel: ObservableObject {
     @Published var contentList: [TimeData] = []
     
-    init() {
-        contentList = TimeModel.sampleData
-    }
-    
 }
 
 extension TimeModel {
@@ -27,9 +23,16 @@ extension TimeModel {
     }
 }
 
+
+/// 주된 데이터 구조
+///
+/// - id: UUID = 자동 초기화
+/// - createdAt: Date = 자동 초기화
+/// - title: String = 사용자 입력값
+/// - totalSeconds: Int = 0으로 초기화
 struct TimeData: Identifiable {
     let id = UUID()
     let createdAt = Date.now
     var title: String
-    var totalSeconds: Int
+    var totalSeconds: Int = 0
 }
