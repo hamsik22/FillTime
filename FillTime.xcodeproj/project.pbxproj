@@ -14,7 +14,6 @@
 		5949F7B22AAE0DD600E58D5A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5949F7B12AAE0DD600E58D5A /* Preview Assets.xcassets */; };
 		5949F7C62AAE0DD600E58D5A /* FillTimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949F7C52AAE0DD600E58D5A /* FillTimeUITests.swift */; };
 		5949F7C82AAE0DD600E58D5A /* FillTimeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949F7C72AAE0DD600E58D5A /* FillTimeUITestsLaunchTests.swift */; };
-		91F0A08A2C969F4200C1152C /* TextBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 91F0A0892C969F4200C1152C /* TextBox.swift */; };
 		C34631872BCE6F8A0075A880 /* TestTimeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34631862BCE6F8A0075A880 /* TestTimeClass.swift */; };
 		C350D6DB2BE227F000359B6B /* Develop Document in Resources */ = {isa = PBXBuildFile; fileRef = C350D6DA2BE227F000359B6B /* Develop Document */; };
 		C3CC7BAA2C786D0B00FFC271 /* TimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CC7BA92C786D0B00FFC271 /* TimeModel.swift */; };
@@ -52,7 +51,6 @@
 		5949F7C12AAE0DD600E58D5A /* FillTimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FillTimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5949F7C52AAE0DD600E58D5A /* FillTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillTimeUITests.swift; sourceTree = "<group>"; };
 		5949F7C72AAE0DD600E58D5A /* FillTimeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillTimeUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		91F0A0892C969F4200C1152C /* TextBox.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextBox.swift; sourceTree = SOURCE_ROOT; };
 		C32AAF532B514207005D38F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C34631862BCE6F8A0075A880 /* TestTimeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTimeClass.swift; sourceTree = "<group>"; };
 		C350D6DA2BE227F000359B6B /* Develop Document */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Develop Document"; sourceTree = "<group>"; };
@@ -148,7 +146,6 @@
 				C3CC7BB32C788FB100FFC271 /* CalendarView.swift */,
 				C3CC7BB12C788F5900FFC271 /* SettingView.swift */,
 				C3CC7BAF2C788F4E00FFC271 /* TimeListView.swift */,
-				59A488B42AE829DA00C7E812 /* Component */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -159,14 +156,6 @@
 				C3CC7BA92C786D0B00FFC271 /* TimeModel.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		59A488B42AE829DA00C7E812 /* Component */ = {
-			isa = PBXGroup;
-			children = (
-				91F0A0892C969F4200C1152C /* TextBox.swift */,
-			);
-			path = Component;
 			sourceTree = "<group>";
 		};
 		91F21E7B2B662DFC0030EC5C /* ViewModel */ = {
@@ -241,7 +230,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1430;
-				LastUpgradeCheck = 1520;
+				LastUpgradeCheck = 1600;
 				TargetAttributes = {
 					5949F7A62AAE0DD300E58D5A = {
 						CreatedOnToolsVersion = 14.3;
@@ -316,7 +305,6 @@
 				C3CC7BB02C788F4E00FFC271 /* TimeListView.swift in Sources */,
 				C3CC7BAA2C786D0B00FFC271 /* TimeModel.swift in Sources */,
 				5949F7AB2AAE0DD300E58D5A /* FillTimeApp.swift in Sources */,
-				91F0A08A2C969F4200C1152C /* TextBox.swift in Sources */,
 				C3CC7BB22C788F5900FFC271 /* SettingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -551,7 +539,6 @@
 		5949F7CF2AAE0DD600E58D5A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -573,7 +560,6 @@
 		5949F7D02AAE0DD600E58D5A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -594,7 +580,6 @@
 		5949F7D22AAE0DD600E58D5A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UF3R52LYV7;
@@ -612,7 +597,6 @@
 		5949F7D32AAE0DD600E58D5A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = UF3R52LYV7;

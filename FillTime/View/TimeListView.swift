@@ -63,7 +63,7 @@ struct TimeListView: View {
         if dataHasExist {
             TimeListCellWithController
         } else {
-            TextBox(content: "It's Empty")
+            Text("It's Empty")
         }
     }
     
