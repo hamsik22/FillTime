@@ -89,6 +89,11 @@ struct TimeListView: View {
                 // Controller Button
                 Button(action: {
                     // TODO: 타이머 실행
+                    if viewModel.timer.isValid {
+                        viewModel.stopTimer()
+                    } else {
+                        viewModel.startTimer()
+                    }
                 }, label: {
                     Image("PlayButton")
                         .frame(width: 40, height: 40)
