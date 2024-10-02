@@ -64,6 +64,7 @@ struct TimeListView: View {
         if dataHasExist {
             TimeListCellWithController
         } else {
+            // TODO: 데이터가 존재하지 않을 때 표시할 화면
             Text("It's Empty")
         }
     }
@@ -122,6 +123,7 @@ struct TimeListView: View {
                 print("Data \(contentTitle) Saved!")
                 isAddingContent = false
                 contentTitle = ""
+                contentDescription = ""
                 viewModel.fetchData()
             }, label: {
                 Text("저장")
@@ -130,6 +132,7 @@ struct TimeListView: View {
             Button(action: {
                 // 취소하기
                 contentTitle = ""
+                contentDescription = ""
                 isAddingContent = false
                 viewModel.fetchData()
             }, label: {
