@@ -19,9 +19,8 @@ class TimeViewModel: ObservableObject {
     
     
     // MARK: for Time Functions
-    /// 특정 데이터의 **시간값**을 1초에 1씩 증가시키는 타이머를 실행한다.
-    func startTimer(time: Int) {
-        recordingSeconds = time
+    /// 타이머를 시작한다.
+    func startTimer() {
         timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [self] Timer in
             recordingSeconds += 1
             print("Second : \(recordingSeconds)")
