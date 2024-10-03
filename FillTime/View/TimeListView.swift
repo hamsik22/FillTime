@@ -80,7 +80,7 @@ struct TimeListView: View {
                 VStack(alignment: .leading, spacing: 10) {
                     Text(item.title)
                         .font(.system(size: 24))
-                    Text("D + \(viewModel.timeFormatt(input: item.totalSeconds))")
+                    Text("D + \(viewModel.timeFormatt(input: viewModel.recordingSeconds))")
                         .font(.system(size: 24))
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -92,7 +92,7 @@ struct TimeListView: View {
                     if viewModel.timer.isValid {
                         viewModel.stopTimer()
                     } else {
-                        viewModel.startTimer()
+                        viewModel.startTimer(time: item.totalSeconds)
                     }
                 }, label: {
                     Image("PlayButton")
