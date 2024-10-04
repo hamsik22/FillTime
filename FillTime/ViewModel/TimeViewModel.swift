@@ -35,6 +35,9 @@ class TimeViewModel: ObservableObject {
         if self.timer.isValid {
             self.timer.invalidate()
             print("Timer has Invalidate!")
+            self.objectWillChange.send()
+        } else {
+            print("No Timer to Invalidate!")
         }
     }
     

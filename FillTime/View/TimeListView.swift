@@ -80,7 +80,7 @@ struct TimeListView: View {
                 VStack(alignment: .leading, spacing: 10) {
                     Text(item.title ?? "Title Error!")
                         .font(.system(size: 24))
-                    // TODO: 실시간 반영될 데이터
+                    // 실시간 업데이트
                     Text("D + \(viewModel.timeFormatt(input: item.totalSeconds))")
                         .font(.system(size: 24))
                 }
@@ -96,9 +96,17 @@ struct TimeListView: View {
                         viewModel.startTimer(uuid: item.id)
                     }
                 }, label: {
-                    Image("PlayButton")
-                        .frame(width: 40, height: 40)
-                        .padding(.horizontal, 10)
+                    // TODO: 타이머 실행/정지 시에 따른 버튼 변화
+                    // 정지 버튼 이후로 바뀌지 않음
+                    if viewModel.timer.isValid {
+                        Image("PauseButton")
+                            .frame(width: 40, height: 40)
+                            .padding(.horizontal, 10)
+                    } else {
+                        Image("PlayButton")
+                            .frame(width: 40, height: 40)
+                            .padding(.horizontal, 10)
+                    }
                 })
             }
             .padding()
