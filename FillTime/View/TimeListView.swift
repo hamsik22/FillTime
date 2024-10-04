@@ -78,9 +78,10 @@ struct TimeListView: View {
             HStack {
                 // Informations
                 VStack(alignment: .leading, spacing: 10) {
-                    Text(item.title)
+                    Text(item.title ?? "Title Error!")
                         .font(.system(size: 24))
-                    Text("D + \(viewModel.timeFormatt(input: viewModel.recordingSeconds))")
+                    // TODO: 실시간 반영될 데이터
+                    Text("D + \(viewModel.timeFormatt(input: item.totalSeconds))")
                         .font(.system(size: 24))
                 }
                 .frame(maxWidth: .infinity, alignment: .leading)
@@ -88,11 +89,11 @@ struct TimeListView: View {
                 
                 // Controller Button
                 Button(action: {
-                    // TODO: 타이머 실행
+                    // Start Timer
                     if viewModel.timer.isValid {
                         viewModel.stopTimer()
                     } else {
-                        viewModel.startTimer(time: item.totalSeconds)
+                        viewModel.startTimer(uuid: item.id)
                     }
                 }, label: {
                     Image("PlayButton")
