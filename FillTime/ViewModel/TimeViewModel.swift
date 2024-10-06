@@ -12,8 +12,6 @@ class TimeViewModel: ObservableObject {
     private var sharedModel: TimeModel = TimeModel()
     // 뷰에서 표시할 메인 데이터
     @Published var timeList: [TimeData] = []
-    // 1초씩 증가하는 값을 저장하는 변수
-    var timer: Timer = Timer()
     
     init() {
         self.timeList = sharedModel.contentList
@@ -22,22 +20,25 @@ class TimeViewModel: ObservableObject {
     
     // MARK: for Time Functions
     func startTimer(uuid: UUID) {
-        timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [self] Timer in
-            if let index = timeList.firstIndex(where: { $0.id == uuid }) {
+        if let index = timeList.firstIndex(where: { $0.id == uuid }) {
+            self.timeList[index].timer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: { [self] Timer in
                 timeList[index].totalSeconds += 1
                 self.objectWillChange.send()
                 print("\(timeList[index].title ?? "Title Error") Time : \(timeList[index].totalSeconds)")
-            }
-        })
+            })
+        }
     }
     
-    func stopTimer() {
-        if self.timer.isValid {
-            self.timer.invalidate()
-            print("Timer has Invalidate!")
-            self.objectWillChange.send()
-        } else {
-            print("No Timer to Invalidate!")
+    func stopTimer(uuid: UUID) {
+        if let index = timeList.firstIndex(where: { $0.id == uuid }) {
+            let timer = timeList[index].timer
+                if timer.isValid {
+                    timer.invalidate()
+                    print("Timer has Invalidate!")
+                    self.objectWillChange.send()
+                } else {
+                    print("No Timer to Invalidate!")
+                }
         }
     }
     

@@ -56,7 +56,7 @@ struct TimeListView: View {
     /// 데이터 유무에 따른 컨텐츠를 보여주는 화면
     @ViewBuilder
     var conditionalTimeList: some View {
-        
+        // 데이터 유무 계산속성
         var dataHasExist: Bool {
             !viewModel.timeList.isEmpty
         }
@@ -90,23 +90,22 @@ struct TimeListView: View {
                 // Controller Button
                 Button(action: {
                     // Start Timer
-                    if viewModel.timer.isValid {
-                        viewModel.stopTimer()
-                    } else {
-                        viewModel.startTimer(uuid: item.id)
-                    }
+                        if item.timer.isValid {
+                            viewModel.stopTimer(uuid: item.id)
+                        } else {
+                            viewModel.startTimer(uuid: item.id)
+                        }
                 }, label: {
-                    // TODO: 타이머 실행/정지 시에 따른 버튼 변화
-                    // 정지 버튼 이후로 바뀌지 않음
-                    if viewModel.timer.isValid {
-                        Image("PauseButton")
-                            .frame(width: 40, height: 40)
-                            .padding(.horizontal, 10)
-                    } else {
-                        Image("PlayButton")
-                            .frame(width: 40, height: 40)
-                            .padding(.horizontal, 10)
-                    }
+                    // 타이머 실행/정지 시에 따른 버튼 변화
+                        if item.timer.isValid {
+                            Image("PauseButton")
+                                .frame(width: 40, height: 40)
+                                .padding(.horizontal, 10)
+                        } else {
+                            Image("PlayButton")
+                                .frame(width: 40, height: 40)
+                                .padding(.horizontal, 10)
+                        }
                 })
             }
             .padding()
