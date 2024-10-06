@@ -14,6 +14,7 @@
 		5949F7B22AAE0DD600E58D5A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5949F7B12AAE0DD600E58D5A /* Preview Assets.xcassets */; };
 		5949F7C62AAE0DD600E58D5A /* FillTimeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949F7C52AAE0DD600E58D5A /* FillTimeUITests.swift */; };
 		5949F7C82AAE0DD600E58D5A /* FillTimeUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5949F7C72AAE0DD600E58D5A /* FillTimeUITestsLaunchTests.swift */; };
+		C31A9B9D2CB2CAE400160360 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31A9B9C2CB2CAE200160360 /* DataManager.swift */; };
 		C34631872BCE6F8A0075A880 /* TestTimeClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34631862BCE6F8A0075A880 /* TestTimeClass.swift */; };
 		C350D6DB2BE227F000359B6B /* Develop Document in Resources */ = {isa = PBXBuildFile; fileRef = C350D6DA2BE227F000359B6B /* Develop Document */; };
 		C3CC7BAA2C786D0B00FFC271 /* TimeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CC7BA92C786D0B00FFC271 /* TimeModel.swift */; };
@@ -51,6 +52,7 @@
 		5949F7C12AAE0DD600E58D5A /* FillTimeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FillTimeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5949F7C52AAE0DD600E58D5A /* FillTimeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillTimeUITests.swift; sourceTree = "<group>"; };
 		5949F7C72AAE0DD600E58D5A /* FillTimeUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FillTimeUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C31A9B9C2CB2CAE200160360 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		C32AAF532B514207005D38F1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		C34631862BCE6F8A0075A880 /* TestTimeClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestTimeClass.swift; sourceTree = "<group>"; };
 		C350D6DA2BE227F000359B6B /* Develop Document */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Develop Document"; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 		91F21E7B2B662DFC0030EC5C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C31A9B9C2CB2CAE200160360 /* DataManager.swift */,
 				C3CC7BAB2C786D1400FFC271 /* TimeViewModel.swift */,
 			);
 			path = ViewModel;
@@ -301,6 +304,7 @@
 			files = (
 				5949F7AD2AAE0DD300E58D5A /* ContentView.swift in Sources */,
 				C3CC7BB42C788FB100FFC271 /* CalendarView.swift in Sources */,
+				C31A9B9D2CB2CAE400160360 /* DataManager.swift in Sources */,
 				C3CC7BAC2C786D1400FFC271 /* TimeViewModel.swift in Sources */,
 				C3CC7BB02C788F4E00FFC271 /* TimeListView.swift in Sources */,
 				C3CC7BAA2C786D0B00FFC271 /* TimeModel.swift in Sources */,
